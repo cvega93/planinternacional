@@ -123,10 +123,30 @@ class Website extends MY_Controller
         */
 	}
 
-	function testeo() {
+	function testeo()
+	{
 		echo "hola mundo";
 		$client = new GuzzleHttp\Client();
-		$client->request('');
+		echo "<pre>";
+		$client->request('post', 'https://forms.hubspot.com/uploads/form/v2/4390725/3543b760-c8ab-4e8c-a616-b8dc74771066', [
+			'debug' => true,
+			'query' => [
+				'email' => 'v.cristianalfredo@gmail.com',
+				'firstname' => 'Cristian',
+				'lastname' => 'Vega',
+
+				'tipo_de_documento' => 'DNI',
+				'n_mero_de_documento' => '48453654',
+				'genero' => 'M',
+				'tienes_hijos' => 'no',
+				'celular' => '123123123',
+				'tipo_de_donaci_n' => 'Única',
+				'moneda' => 'Dólares',
+				'monto_de_donacion' => '123',
+				'estado_donacion_culqi' => ''
+			]
+		]);
+		echo "</pre>";
 	}
 
 	function unete()
