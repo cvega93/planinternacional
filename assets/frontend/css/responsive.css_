@@ -1,0 +1,433 @@
+/*************************RESPONSIVE********************/
+// ┌────────────────────────────────────────────────────────────────────┐ \\
+// │ Desarollado por PHS PERÚ | www.phsperu.com                         │ \\
+// ├────────────────────────────────────────────────────────────────────┤ \\
+// │ DISEÑO Y MAQUETA:                                               │ \\
+// │ Brandy César Llontop Armas                                         │ \\
+// ├────────────────────────────────────────────────────────────────────┤ \\
+// │ PROGRAMACIÓN:                                                      │ \\
+// │ Luis Karlos Shepherd Vargas                                        │ \\
+// └────────────────────────────────────────────────────────────────────┘ \\
+ 
+/*
+1110px
+960px
+640px
+440px
+*/
+
+/**Escritorios muy anchos*******************************************************
+*******************************************************************************/
+@media only screen and (max-width: 1199px){
+
+
+}
+
+/**Tablets en horizonal y escritorios normales********************************
+*****************************************************************************/
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+/**Moviles en horizontal o tablets en vertical********************************
+******************************************************************************/
+@media only screen and (max-width: 991px) {
+	h1.logotipo{
+		margin: 0 auto;
+		margin-top: -5px;
+	}
+
+	.cont-rsp{
+		margin: 0 auto !important;
+		width: 100%;
+	}
+
+	.cont-rsp-padd{
+		padding: 0 !important
+	}
+
+	/*****BANNER***/
+
+	.camera_wrap .camera_pag .camera_pag_ul {
+	    /*display: none;*/
+	}
+
+	.camera_next > span {
+	    width: 53px !important;
+	}
+
+	#camera_wrap_4{
+		height: 531px;
+		margin-bottom: 0 !important;
+	}
+	
+	.contenedor-texto{
+		width: 92%;
+		margin: 40px;
+		height: 450px
+	}
+
+	.contenedor-texto h3, .contenedor-texto p{
+		text-align: center;
+	}
+
+	.contenedor-texto .group-btn{
+		margin: 0 auto;
+		display: inline-block;
+	}
+
+	.texto_banner1,.texto_banner2 {
+		margin-top: 0px;
+	}
+
+	.texto_banner1 img, .texto_banner1 a, .texto_banner2 img, .texto_banner2 a{
+		/*margin: 0 auto;*/
+		display: block;
+		width: 320px;
+	}
+
+	.btn-banner img{
+		width: auto !important;
+	}
+
+	.img_banner1 img, .img_banner2 img{
+		width: 400px;
+		margin: 0 auto
+	}
+
+	.nina-banner2 img{
+		width: 435px;
+	}
+
+	img.aliados{
+		width: 140px;
+	}
+	.reset-total-rsp{
+		padding: 0 !important
+	}
+	.cont-back1 .container{
+		padding: 0 !important
+	}
+	/********************************************/
+	.logo-footer{
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		text-align: center;
+		margin-top: -23px !important;
+	}
+
+	.texto-pie .container{
+		padding: 0 !important
+	}
+
+	footer h5{
+		font-size: 25px;
+	}
+}
+
+/**Moviles en horizontal o tablets en vertical********************************
+******************************************************************************/
+@media only screen and (max-width: 767px) {
+	/*.cont-back1{
+	    background: url(../img/bg-info1-a.png) #0072ce;
+	}/*
+	
+}
+
+/****************************Moviles Iphone 6, 6s, 7 **************************
+******************************************************************************/
+@media only screen and (max-width: 750px) {
+	
+}
+
+/******************************************************************************
+******************************************************************************/
+@media only screen and (max-width: 578px) {
+	#camera_wrap_4 {
+		height: 650px;
+	}
+	.texto_banner1 img, .texto_banner1 a, .texto_banner2 img, .texto_banner2 a {
+    	margin: 0 auto;
+	}
+	.nina-banner2 img {
+		width: 264px;
+	}
+	.cont-video iframe{
+		height: 298px;
+	}
+	.cont-video video, .cont-video iframe {
+    	margin-top: 0px;
+	}
+	.cont-video{
+		background: url(../img/1bg-video.png) -303px -15px no-repeat;
+		background-size: cover;
+		height: 393px;
+		padding: 30px 0 30px 0 !important;
+	}
+
+	.ctn-llave img{
+		width: 202px;
+		margin: 0 auto;
+		margin-top: -15px;
+		margin-bottom: -10%;
+		text-align: center;
+		display: block;
+		z-index: 1;
+		position: relative;
+	}
+	.bg-testimonios {
+	    width: 374px;
+	    padding: 38px;
+	    margin: 0 auto;
+	}
+	.cont-test .carousel-indicators {
+	    left: 24% !important;
+	}
+	.cont-back2 {
+	    background-position-x: 50%;
+	    background-position-y: 97%;
+	    background-size: 436px;
+	    height: 1737px;
+	}
+	.ctn-aport-sig img {
+	    top: 0;
+	    position: relative;
+	    left: 0;
+	    z-index: 0;
+	    margin: 0 auto;
+	    display: block;
+	}
+	img.titulo-abrir-puertas{
+		margin: 0 auto;
+		display: block;
+	}
+	.bg-don-uni, .bg-don-men {
+	    margin: 0 auto;
+	}
+	.ctn-don h2 {
+	    left: 0;
+		margin: 0 auto;
+		display: block;
+		width: 62%;
+		margin-bottom: -32px;
+		line-height: 23px;
+	}
+	.ctn-don .carousel-indicators {
+	    position: relative;
+	    bottom: -5px;
+	    margin: 0 auto;
+	    display: block;
+	    left: 0;
+	    text-align: left;
+	}
+	.ctn-estad {
+	    height: 344px;
+	    background-size: 457px;
+	    background-position-x: 73%;
+	    margin-top: 20px;
+	}
+	.bg-estad {
+	    padding: 49px 179px;
+	    height: 289px;
+	    border-radius: 55px;
+	}
+	.ctn-don {
+   		padding-top: 30px;
+	}
+	.cont-back3 {
+		background-size: cover;
+		height: 1471px;
+		padding-top: 137px;
+		margin-bottom: -133px;
+	}
+	.img-ninas3{
+		height: 1606px;
+		background-size: 563px;
+		background-position-x: 100%;
+		background-position-y: 85%;
+	}
+
+	.cont-form-une h3, .cont-form-une span, .cont-form-don h3, .cont-form-don span{
+		display: block;
+		text-align: center;
+	}
+	.nav-tabs {
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.nav-tabs > li {
+	    float: none;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.hr-1{
+		display: none;
+	}
+	.ctn-doc{
+		margin-top: 25px;
+	}
+	.ctn-formulario {
+	    margin: 15px 0 0 0;
+	}
+	
+}
+
+/******************************************************************************
+******************************************************************************/
+@media only screen and (max-width: 414px) {
+	.img_banner1 img, .img_banner2 img {
+		width: 280px;
+	}
+	.contenedor-texto {
+	    width: 92%;
+	    margin: 61px 0;
+	    height: 600px;
+	}
+
+	.aliados-cont li {
+	    display: block;
+	}
+	#menu-container .menu-list {
+		max-width: 415px;
+	}
+	.ctn-don h2 {
+	    width: 100%;
+	}
+	.bg-estad {
+	    padding: 48px 79px;
+	}
+	.ctn-estad {
+		background-position-x: 14%;
+	}
+	.cont-back2 {
+		background-size: 354px;
+		height: 1698px;
+	}
+	.cont-video iframe{
+		height: 220px;
+	}
+	.cont-video {
+	    background: url(../img/1bg-video.png) -235px -8px no-repeat;
+	        background-size: auto auto;
+	    background-size: cover;
+	    height: 295px;
+	    padding: 30px 0 30px 0 !important;
+	}
+	.nav-tabs > li > a {
+	    font-size: 17px;
+	    padding: 5px 4px;
+	    margin: 0 1px 1px 0;
+	}
+	.img-ninas3 {
+	    background-size: 442px;
+	    background-position-x: 49%;
+	    background-position-y: 81%;
+	}
+	.cont-back3 {
+		top: -94px;
+	}
+}
+
+/******************************************************************************
+******************************************************************************/
+@media only screen and (max-width: 375px) {
+	#menu-container .menu-list {
+		box-shadow: rgba(0, 36, 66, 0.8) 32px 10px 46px !important;
+	}
+	#menu-wrapper #hamburger-menu span{	    
+	    box-shadow: 1px 0px 3px rgba(0, 36, 66, 0.8);
+	}
+	.bg-testimonios {
+	    width: 100%;
+	    padding: 38px;
+	    margin: 0 auto;
+	    background-size: contain;
+	    padding: 27px 35px;
+	}
+	.bg-testimonios p{
+		font-size: 13px !important;
+		line-height: 14px !important
+	}
+	.cont-test .carousel-indicators {
+	    left: 10% !important;
+	    bottom: 5px;
+	    margin-bottom: 5px;
+	}
+	.ctn-estad {
+	    background-position-x: 33%;
+	}
+	.cont-video iframe{
+		height: 200px;
+	}
+	.cont-video {
+	    height: 280px;
+	}
+	.cont-back3 {
+	    height: 1606px;
+	}
+	.img-ninas3 {
+	    background-size: 442px;
+	    background-position-x: 49%;
+	    background-position-y: 88%;
+	}
+}
+
+
+/******************************************************************************
+******************************************************************************/
+@media only screen and (max-width: 360px) {
+	.bg-don-uni, .bg-don-men {
+	    width: 266px;
+	}
+	.img-ninas3 {
+	    background-size: 441px;
+		background-position-x: 51%;
+		background-position-y: 88%;
+	}
+	.cont-test .carousel-indicators {
+		margin-bottom: -14px;
+	}
+}
+
+/****************************Moviles Iphone 5s********************************
+******************************************************************************/
+@media only screen and (max-width: 320px) {
+	#menu-container .menu-list li.menu-normal a, #menu-container .menu-list .menu-login {
+		font-size: 17px;
+		padding: 12px;
+	}
+	.bg-don-uni, .bg-don-men {
+	    width: 240px;
+	}
+	.ctn-estad {
+	    background-position-x: 33%;
+	    background-size: 418px;
+	}
+	.bg-estad {
+	    padding: 39px 54px;
+	}
+	.cont-back2 {
+	    background-size: 275px;
+	    height: 1491px;
+	}
+	.cont-video iframe{
+		height: 180px;
+	}
+	.cont-video {
+	    height: 256px;
+	}
+	.cont-back3 {
+		top: -74px;
+	}
+	.img-ninas3 {
+	    background-size: 291px;
+	    background-position-x: 51%;
+	    background-position-y: 79%;
+	}
+	.btn-primary {
+	    padding: 12px 18px;
+	}
+}
+

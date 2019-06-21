@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteRule ^([A-Za-z0-9-_.]+)/?$ index.php/$1 [L]
+RewriteRule ^([A-Za-z0-9-_.]+)/([A-Za-z0-9-_]+)/?$ index.php/$1/$2 [L]
+RewriteRule ^([A-Za-z0-9-_.]+)/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ index.php/$1/$2/$3 [L]
+RewriteRule ^([A-Za-z0-9-_.]+)/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ index.php/$1/$2/$3/$4 [L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^uneteaplanperu\.org\.pe$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.uneteaplanperu\.org\.pe$
+RewriteRule ^/?$ "https\:\/\/uneteaplanperu\.org\.pe\/" [R=301,L]
+

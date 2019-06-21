@@ -1,0 +1,4 @@
+[29-May-2019 19:20:34 UTC] PHP Fatal error:  Call to undefined function mysqli_init() in /home/uneteaplanperuor/public_html/system/database/drivers/mysqli/mysqli_driver.php on line 135
+[29-May-2019 19:21:13 UTC] PHP Fatal error:  Call to undefined function mysqli_init() in /home/uneteaplanperuor/public_html/system/database/drivers/mysqli/mysqli_driver.php on line 135
+[29-May-2019 19:21:14 UTC] PHP Fatal error:  Call to undefined function mysqli_init() in /home/uneteaplanperuor/public_html/system/database/drivers/mysqli/mysqli_driver.php on line 135
+[07-Jun-2019 17:29:09 UTC] PHP Fatal error:  Call to undefined function mysqli_init() in /home/uneteaplanperuor/public_html/system/database/drivers/mysqli/mysqli_driver.php on line 135
