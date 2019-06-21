@@ -173,7 +173,9 @@ header{
 	z-index: 2;
 	position: fixed;
     width: 100%;
-}
+    background: #0073d2;
+    font-family: "Veneer", Arial, Tahoma, sans-serif; 
+  }
 
 header h1{
 	margin: -8px 0 0 21px;
@@ -187,15 +189,20 @@ header.large {
   background-position-y: 38px;
   background-position-x: -234px;
   transition: all 0.3s ease-in-out 0s;
+ 
 }
 
+header.small ul{
+    display: flex;
+     
+}
 header.large .logotipo {
   width: 80px;
   transition: all 0.3s ease-in-out 0s;
 }
 
 header.small {
-  height: 107px;
+  /*height: 107px;*/
   transition: all 0.3s ease-in-out 0s;
   top: 0;
   background-image: url(../img/line.jpg);
@@ -226,6 +233,39 @@ header.small .datos-cabecera li a i{
   padding: 4px;
   width: 22px;
   height: 22px;
+}
+header .lista-header a {
+   font-size: 20px;
+   padding: 0 20px; 
+   color:#ffffff;
+}
+header img.hd-logo{
+    max-width: 70%;
+}
+.btn-donar{
+    max-width: 50%;;
+}
+.header-web {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.ct-logo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.ct-donar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.header-web ul {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 0;
+    width: 60%;
 }
 
 /***********BANNER********/
@@ -269,7 +309,7 @@ header.small .datos-cabecera li a i{
 .contenedor-texto {
     width: 100%;
     text-align: center;
-    margin: 20px 0 0 0;
+    margin: 80px 0 0 0;
     color: #FFF;
     padding: 0;
     height: 550px;
@@ -698,7 +738,7 @@ hr.style3{
 
 .tab-content {
     padding: 24px 0;
-    display: block;
+    display: inline-block;
 }
 
 .nav-tabs{
@@ -770,11 +810,18 @@ hr.style3{
 
 }
 
-.bg-formulario input{
+.bg-formulario input, .bg-formulario h5{
     font-family: "Veneer", Arial, Tahoma, sans-serif;    
     font-size: 18px;
     color: #33A255;
     height: 40px;
+}
+.bg-formulario h5 {
+    display: flex;
+    align-items: center; 
+}
+.reset-total.genero {
+    padding-top: 15px!important;
 }
 .cont-camp{
     /*margin: 25px 0;*/
@@ -867,7 +914,7 @@ hr.style3{
 }
 .cont-select, .cont-select::after, .cont-select select{
   height: 45px !important;
-  font-weight: normal; !important;
+  font-weight: normal !important;
 }
 
 .cont-select{
@@ -892,11 +939,12 @@ hr.style3{
     width: 47px;
     background-color: #f2bc00;
     position: absolute;
-    top: 0;
+    top: -1px;
     right: 0px;
     pointer-events: none;
     color: #0073d6;
     font-size: 21px;
+    border-radius: 15px;
 }
 
 .cont-select select {
@@ -1131,6 +1179,9 @@ footer strong{
     vertical-align: middle;
 }
 
+#menu-wrapper {
+    display: none;
+}
 /****************MENU*********************/
 /*https://codepen.io/slyka85/pen/LbXYKQ*/
 
@@ -1315,4 +1366,47 @@ li.lin-sep hr{
     transform: rotate(180deg);
     background: #fff !important;
     opacity: 0;
+}
+.img_banner1 {
+    display: none;
+
+}
+@media(max-width:1112px){
+    .header-web ul {
+      width: 100%;
+    }
+}
+@media(max-width:768px){
+    #menu-wrapper {
+        display: block;
+    }
+   ul.lista-header {
+       display: none;
+   } 
+   header {
+       display: flex;
+       align-items: center;
+   }
+   header.small ul {
+    display: none;
+}
+header img.hd-logo {
+    max-width: 80%;
+}
+.btn-donar {
+    max-width: 50%;
+}
+}
+@media(max-width:520px){
+    header img.hd-logo {
+        max-width: 100%;
+    }
+    .btn-donar {
+        max-width: 70%;
+    }
+ }
+ @media (max-width: 320px){
+.btn-donar {
+    max-width: 100%;
+}
 }

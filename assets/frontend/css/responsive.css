@@ -1287,4 +1287,8 @@
 	    padding: 12px 18px;
 	}
 }
-
+@media only screen and (max-width: 991px){
+.texto_banner1 {
+    margin-top: 60px !important;
+}
+}
