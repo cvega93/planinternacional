@@ -17,8 +17,7 @@
 		<div class="col-sm-6 col-md-offset-1 col-md-5 datos-footer">
 			<h5><?php echo $campania['titulo']; ?></h5>
 			<ul>
-				<li><i class="fas fa-envelope"></i> <a
-						href="mailto:<?php echo $campania['email_contacto']; ?>"><?php echo $campania['email_contacto']; ?></a>
+				<li><i class="fas fa-envelope"></i> <a href="mailto:<?php echo $campania['email_contacto']; ?>"><?php echo $campania['email_contacto']; ?></a>
 				</li>
 				<li><i class="fas fa-phone"></i> <?php echo $campania['telefono']; ?></li>
 				<li><i class="fas fa-map-marker-alt"></i> <?php echo $campania['direccion']; ?></li>
@@ -65,39 +64,46 @@
 
 <!--SCRIPT IMPORTANTE-->
 <script src="<?php echo backend_view(); ?>js/jquery-1.7.2.min.js"></script>
-<script src="<?php echo backend_view(); ?>assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="<?php echo backend_view(); ?>js/bootstrap.min.js"></script>
-<!--SCRIPT IMPORTANTE-->
-<link href="<?php echo backend_view(); ?>css/validationEngine.jquery.css" rel="stylesheet">
-<script src="<?php echo backend_view(); ?>js/jquery.validationEngine.js"></script>
-<script src="<?php echo backend_view(); ?>js/jquery.validationEngine-es.js"></script>
+<!--CULQI -->
+<script src="https://checkout.culqi.com/js/v3"></script>
 
-<script type="text/javascript">
-	$('form').validationEngine();
-</script>
+<!--SCRIPT IMPORTANTE-->
+<!--<link href="--><?php //echo backend_view(); ?><!--css/validationEngine.jquery.css" rel="stylesheet">-->
+<!--<script src="--><?php //echo backend_view(); ?><!--js/jquery.validationEngine.js"></script>-->
+<!--<script src="--><?php //echo backend_view(); ?><!--js/jquery.validationEngine-es.js"></script>-->
+<!---->
+
 
 <!--CAMERA-MASTER-->
-<script type="text/javascript"
-		src="<?php echo base_view(); ?>resources/camera_master/scripts/jquery.mobile.customized.min.js"></script>
-<script type="text/javascript"
-		src="<?php echo base_view(); ?>resources/camera_master/scripts/jquery.easing.1.3.js"></script>
+<!--<script type="text/javascript"-->
+<!--		src="--><?php //echo base_view(); ?><!--resources/camera_master/scripts/jquery.mobile.customized.min.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--		src="--><?php //echo base_view(); ?><!--resources/camera_master/scripts/jquery.easing.1.3.js"></script>-->
+<script src="<?php echo backend_view(); ?>assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo base_view(); ?>resources/camera_master/scripts/camera.min.js"></script>
 
+
+<!--<script type="text/javascript">-->
+<!--	// $('form').validationEngine();-->
+<!--</script>-->
+
+
+
+<!--menu script-->
 <script type="text/javascript">
-	$('#myCarousel').carousel({
-		autoplay: false,
-		interval: 1000 * 11
-	});
-
-	$('#myCarousel4').carousel({
-		autoplay: false,
-		interval: 1000 * 5
-	});
-</script>
-
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
 	$(function () {
+
+		$("a.scrollLink").click(function (event) {
+			event.preventDefault();
+			$("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
+		});
+
+		$('#myCarousel').carousel({
+			autoplay: false,
+			interval: 1000 * 11
+		});
+
 		$("#slider-range").slider({
 			orientation: "vertical",
 			disabled: true,
@@ -110,42 +116,20 @@
 				$("#amount_max").val(ui.values[1]);
 			}
 		});
-	});
-</script>
 
-<script type="text/javascript">
-	$(document).on("scroll", function () {
-
-		if ($(document).scrollTop() > 100) {
-			$("header").removeClass("large").addClass("small");
-		} else {
-			$("header").removeClass("small").addClass("large");
-		}
-
-	});
-</script>
-
-<script>
-	jQuery(function () {
-		jQuery('#camera_wrap_4').camera({
-			time: 8000,
-			height: 'auto',
-			loader: false,
-			pagination: true,
-			thumbnails: false,
-			navigation: false,
-			hover: false,
+		$('#myCarousel4').carousel({
 			autoplay: false,
-			opacityOnGrid: false,
-			imagePath: '../images/'
+			interval: 1000 * 5
 		});
 
-	});
-</script>
+		$(document).on("scroll", function () {
+			if ($(document).scrollTop() > 100) {
+				$("header").removeClass("large").addClass("small");
+			} else {
+				$("header").removeClass("small").addClass("large");
+			}
+		});
 
-<!--menu script-->
-<script type="text/javascript">
-	$(function () {
 		function slideMenu() {
 			var activeState = $("#menu-container .menu-list").hasClass("active");
 			$("#menu-container .menu-list").animate({right: activeState ? "0%" : "-100%"}, 400);
@@ -171,29 +155,22 @@
 </script>
 
 <script type="text/javascript">
-	$(document).ready(function () {
-		$("a.scrollLink").click(function (event) {
-			event.preventDefault();
-			$("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
-		});
-	});
-</script>
-
-<!--CULQI -->
-<script src="https://checkout.culqi.com/v2"></script>
-
-<script>
-	Culqi.publicKey = '<?php echo $this->comercio; ?>';
-</script>
-
-<script>
 	var tipo_pago = 1;
 	var _description = '';
 	var _moneda = 'PEN';
 	var _monto = 0;
 	var _formulario = '';
+	//Culqi.publicKey = '<?php //echo $this->comercio; ?>//';
+	Culqi.publicKey = 'pk_test_CoIGsODjHdYb2fIX';
 
-	function validar_documento(elemento, id) {
+	$(document).ready(function () {
+		$('#formularioPago').on('submit', function (e) {
+			// pagar(e, false);
+		});
+
+	});
+
+	function validar_documento(elemento, id){
 		var value = $(elemento).val();
 
 		if (id == undefined) {
@@ -215,7 +192,6 @@
 			}
 		}
 	}
-
 	function validar_otro_monto(elemento, id) {
 		var monto_minimo_1 = <?php echo $campania['monto_minimo_1']; ?>;
 		var monto_minimo_2 = <?php echo $campania['monto_minimo_2']; ?>;
@@ -243,7 +219,6 @@
 		} else {
 			if (monto_minimo_2 > 0) {
 				_class += ', min[' + monto_minimo_2 + ']';
-
 				setTimeout(function () {
 					$('.monto_minimo_USD').removeClass('hidden');
 				}, 10);
@@ -260,11 +235,9 @@
 			configurar_monto(elemento);
 		}
 	}
-
 	function configurar_descripcion(description) {
 		_description = description;
 	}
-
 	function configurar_moneda(moneda) {
 		$('.monto_minimo').addClass('hidden');
 		_moneda = moneda;
@@ -277,52 +250,79 @@
 			$('#otro_monto_1, #otro_monto_2').removeAttr('class').addClass('form-control');
 		}, 10);
 	}
-
 	function configurar_monto(elemento) {
 		_monto = $(elemento).val();
 	}
 
-	function pagar(elemento) {
-		_formulario = $(elemento).parent().parent().parent('form');
-		var id = $(_formulario).attr('data-id');
+	/**TODO: Enviar formulario antes de mostrar form de culqi*/
+	function pagar() {
+		// alert('stamos');;
+		// _formulario = $(elemento).parent().parent().parent('form');
+		// var id = $(_formulario).attr('data-id');
+		// let moneda = $("input[name='tipo_moneda']:checked").val();
+		let moneda = $("input[name='tipo_moneda']:checked").val();
+		let tipo_donacion = String($("input[name='tipo_pago']:checked").val());
+		let monto = $('#monto_pagar').val();
+		let email = $('#email').val();
+		let description = tipo_donacion === 1 ? "DONACIÓN ÚNICA" : "DONACIÓN MENSUAL";
+		console.log(tipo_donacion)
+		let settings = {
+			title: '<?php echo $campania['titulo']; ?>',
+			currency: moneda,
+			description: description,
+			culqiEmail: email,
+			amount: monto * 100
+		};
 
-		//Culqi.settings({
-		//	title: '<?php //echo $campania['titulo']; ?>//',
-		//	currency: _moneda,
-		//	description: _description,
-		//	culqiEmail: $('#email_' + id).val(),
-		//	amount: _monto * 100
-		//});
+		console.log(settings);
+		Culqi.settings(settings);
+		// send_form(false, true);
+		Culqi.open();
 
-		if (_formulario != '' && $(_formulario).validationEngine('validate') == true) {
-			// Culqi.open();
-			culqi();
-		} else {
-			return false;
-		}
+		// culqi();
 	}
-</script>
 
-<script>
-	// Ejemplo: Tratando respuesta con AJAX (jQuery)
 	function culqi() {
+		console.log(Culqi);
 		if (Culqi.error) {
 			// Mostramos JSON de objeto error en consola
 			console.log(Culqi.error);
 			alert(Culqi.error.mensaje);
 		} else {
-			alert('aca tamos crj')
-			// var token = Culqi.token.id;
-			// $('.token').val(token);
-			// $('.token').attr('value', token);
-
+			// alert('aca tamos crj');
+			var token = Culqi.token.id;
+			$('.token').val(token);
+			$('.token').attr('value', token);
+			console.log(token);
 			setTimeout(function () {
-				$(_formulario).submit();
+				send_form();
 			}, 150);
 		}
 	}
+	function send_form(event, post) {
+		// if (!post) event.preventDefault()
+		$("#formularioPago").submit();
+	}
 </script>
 
+
+<script>
+	$(function () {
+		$('#camera_wrap_4').camera({
+			time: 8000,
+			height: 'auto',
+			loader: false,
+			pagination: true,
+			thumbnails: false,
+			navigation: false,
+			hover: false,
+			autoplay: false,
+			opacityOnGrid: false,
+			imagePath: '../images/'
+		});
+
+	});
+</script>
 <?php if ($campania['google_analytics'] != ''): ?>
 	<?php echo $campania['google_analytics']; ?>
 <?php endif; ?>

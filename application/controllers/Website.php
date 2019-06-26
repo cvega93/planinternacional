@@ -123,30 +123,32 @@ class Website extends MY_Controller
         */
 	}
 
-	function testeo()
+	function save_contact($data)
 	{
-		echo "hola mundo";
 		$client = new GuzzleHttp\Client();
-		echo "<pre>";
-		$client->request('post', 'https://forms.hubspot.com/uploads/form/v2/4390725/3543b760-c8ab-4e8c-a616-b8dc74771066', [
-			'debug' => true,
+		$request = $client->request('post', 'https://forms.hubspot.com/uploads/form/v2/4390725/3543b760-c8ab-4e8c-a616-b8dc74771066', [
 			'query' => [
-				'email' => 'v.cristianalfredo@gmail.com',
-				'firstname' => 'Cristian',
-				'lastname' => 'Vega',
+				'email' => $data['correo_electronico'],
+				'firstname' => $data['nombres'],
+				'lastname' => $data['apellido_paterno'],
 
-				'tipo_de_documento' => 'DNI',
-				'n_mero_de_documento' => '48453654',
-				'genero' => 'M',
-				'tienes_hijos' => 'no',
-				'celular' => '123123123',
-				'tipo_de_donaci_n' => 'Única',
-				'moneda' => 'Dólares',
-				'monto_de_donacion' => '123',
-				'estado_donacion_culqi' => ''
+				'tipo_de_documento' => $data['tipo_documento'],
+				'n_mero_de_documento' => $data['numero_documento'],
+				'genero' => $data['genero'],
+				'tienes_hijos' => $data['tienes_hijos'],
+				'celular' => $data['telefono'],
+				'tipo_de_donaci_n' => $data['dec_donacion'],
+				'moneda' => $data['moneda'],
+				'monto_de_donacion' => $data['total'],
+				'estado_donacion_culqi' => $data['estado'],
+				'fecha_transacci_n' => date("Y-m-d H:i:s"),
+				'id_cargo' => $data['charge'],
+				'bank' => $data['bank'],
+				'tarjeta' => $data['tarjeta'],
+				'estado' => $data['estado']
 			]
 		]);
-		echo "</pre>";
+		return $request;
 	}
 
 	function unete()
@@ -199,14 +201,12 @@ class Website extends MY_Controller
 				$pedidoId = date("Ymd") . date("His");
 				$array = [];
 				$total = 0;
-
 				if ($_POST['monto_total'] == 1) {
 					$total = (double)$_POST['otro_monto'];
 				} else {
 					$total = (double)$_POST['monto_total'];
 				}
-
-				$descripcion = $_POST['descripcion'];
+				$descripcion = $_POST['tipo_pago'] == 1 ? 'primer_tipo_donacion': 'segundo_tipo_donacion';
 				$moneda = $_POST['tipo_moneda'];
 
 				if ($total > 0) {
@@ -219,14 +219,16 @@ class Website extends MY_Controller
 					$array['tipo_pago'] = $this->input->post('tipo_pago'); // 1 = UNICA || 2 = MENSUAL
 					$array['nombres'] = $this->input->post('nombres');
 					$array['apellido_paterno'] = $this->input->post('apellido_paterno');
-					$array['apellido_materno'] = $this->input->post('apellido_materno');
+					$array['apellido_materno'] = '.';
 					$array['correo_electronico'] = $this->input->post('email');
 					$array['telefono'] = $this->input->post('celular');
-					$array['tipo_documento'] = $this->input->post('tipo_documento');
+					$array['tipo_documento'] = $this->input->post('tipo_documento') === 4 ? 'pasaporte' : $this->input->post('tipo_documento');
 					$array['otro_tipo_documento'] = $this->input->post('otro_tipo_documento');
 					$array['numero_documento'] = $this->input->post('numero_documento');
 					$array['pais'] = $this->input->post('pais');
-					$array['cantidad_apoyo'] = $this->input->post('cantidad_apoyo');
+					$array['cantidad_apoyo'] = $total;
+					$array['genero'] = $this->input->post('genero');
+					$array['tienes_hijos'] = $this->input->post('tienes_hijos');
 					$array['moneda'] = $moneda;
 					$array['total'] = $total;
 					$array['detalle'] = '';
@@ -236,13 +238,14 @@ class Website extends MY_Controller
 					$array['usuario_modificacion'] = 1;
 					$array['fecha_creacion'] = $this->fecha();
 					$array['fecha_modificacion'] = $this->fecha();
-
+					$array['dec_donacion'] = $_POST['tipo_pago'] == 1 ? 'Donación única': 'Donación mensual';
 					$this->module_model->guardar('pagos', $array);
 					$id_padre = $pedidoId;
 
 					// Procesamiento con Culqi..
 					try {
-						$culqi = new Culqi\Culqi(array('api_key' => $this->key_secret));
+//						$culqi = new Culqi\Culqi(array('api_key' => $this->key_secret));
+						$culqi = new Culqi\Culqi(array('api_key' => 'sk_test_zR8bdfx1LnL3uyDr'));
 
 						if ($array['tipo_pago'] == 1) // Pago unico
 						{
@@ -252,9 +255,9 @@ class Website extends MY_Controller
 									"capture" => true,
 									"currency_code" => $moneda,
 									"description" => $campania[$descripcion],
-									"email" => $this->input->post('email'),
+									"email" => $array['correo_electronico'],
 									"installments" => 0,
-									"source_id" => $this->input->post('token')
+									"source_id" => $array['token']
 								)
 							);
 						}
@@ -271,20 +274,11 @@ class Website extends MY_Controller
 									"name" => $campania[$descripcion]
 								)
 							);
-
 							$pais = $this->module_model->buscar('paises', $array['pais']);
-
 							$tipos_documento = array('', 'DNI', 'CE', 'Otro');
 							$metadata = array();
-
-							if ($array['tipo_documento'] < 3) {
-								$metadata['tipo_documento'] = $tipos_documento[$array['tipo_documento']];
-							} else {
-								$metadata['tipo_documento'] = $array['otro_tipo_documento'];
-							}
-
+							$metadata['tipo_documento'] = $array['tipo_documento'];
 							$metadata['numero_documento'] = $array['numero_documento'];
-
 							//Crear Cliente
 							$cliente = $culqi->Customers->create(
 								array(
@@ -293,8 +287,8 @@ class Website extends MY_Controller
 									"address" => $pais['titulo'] . ' - ' . $pais['codigo_iso'],
 									"email" => $array['correo_electronico'],
 									"first_name" => $array['nombres'],
-									"last_name" => $array['apellido_paterno'] . ' ' . $array['apellido_materno'],
-									"metadata" => $metadata,
+									"last_name" => $array['apellido_paterno'],
+										"metadata" => $metadata,
 									"phone_number" => ($array['telefono'] != '') ? $array['telefono'] : '999999999'
 								)
 							);
@@ -302,21 +296,25 @@ class Website extends MY_Controller
 							$tarjeta = $culqi->Cards->create(
 								array(
 									"customer_id" => $cliente->id,
-									"token_id" => $this->input->post('token'),
+									"token_id" => $array['token'],
 									"validate" => false
 								)
 							);
-
 							$suscripcion = $culqi->Subscriptions->create(
 								array(
 									"card_id" => $tarjeta->id,
 									"plan_id" => $plan->id
 								)
 							);
-
 							$charge = $suscripcion->charges[0];
 						}
-
+						$array['charge'] = $charge->id;
+						$array['bank'] = $charge->source->iin->issuer->name;
+						$array['tarjeta'] = $charge->source->iin->card_brand;
+						$array['estado'] = $charge->outcome->type;
+						$this->save_contact($array);
+//						var_dump($charge);
+//						die();
 						//if($data['codigo_respuesta'] == 'venta_exitosa' OR $data['codigo_respuesta'] == 'venta_registrada')
 						if ($charge->outcome->code == 'AUT0000') {
 							$_detalle = $charge->outcome->user_message;
