@@ -308,6 +308,7 @@ class Website extends MY_Controller
 							);
 							$charge = $suscripcion->charges[0];
 						}
+
 						$array['charge'] = $charge->id;
 						$array['bank'] = $charge->source->iin->issuer->name;
 						$array['tarjeta'] = $charge->source->iin->card_brand;
@@ -415,9 +416,9 @@ class Website extends MY_Controller
 							redirect("/", "refresh");
 						}
 					} catch (Exception $e) {
+
 						$response = (array)json_decode($e->getMessage());
 						$activado = 0;
-
 						$message = array('type' => 'danger', 'content' => $response['merchant_message']);
 						$this->session->set_flashdata('message', $message);
 						redirect("/", "refresh");

@@ -28,42 +28,40 @@
 <?php if (isset($banners) AND count($banners) > 0): ?>
 	<div class="fluid_container clearfix" id="acercade">
 		<div class="camera_wrap camera_emboss" id="camera_wrap_4">
-			<?php foreach ($banners as $key => $value): ?>
-				<div data-thumb="<?php echo base_url(); ?>uploads/100x100/<?php echo $value['imagen_fondo']; ?>"
-					 data-src="<?php echo base_url(); ?>uploads/<?php echo $value['imagen_fondo']; ?>">
-					<div class="container cont-rsp">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 reset-total">
-								<div class="contenedor-texto">
-									<div class="col-xs-12 col-sm-12 col-md-12 img_banner1 reset-total">
-										<img src="<?php echo base_url(); ?>uploads/<?php echo $value['logo']; ?>"
-											 title="<?php echo $campania['titulo']; ?>"
-											 alt="<?php echo $campania['titulo']; ?>"/>
-									</div>
-									<div
-										class="col-xs-12 col-sm-12 col-md-<?php echo ($value['imagen_derecha'] != '') ? '6' : '4'; ?> reset-total texto_banner1">
-										<img
-											src="<?php echo base_url(); ?>uploads/<?php echo $value['imagen_izquierda']; ?>"
-											title="" alt=""/>
-										<?php if ($value['enlace'] != ''): ?>
-											<a href="<?php echo $value['enlace']; ?>" class="btn-banner scrollLink"><img
-													src="<?php echo base_url(); ?>uploads/<?php echo $value['imagen_enlace']; ?>"></a>
-										<?php endif; ?>
-									</div>
-
-									<?php if ($value['imagen_derecha'] != ''): ?>
-										<div class="col-xs-12 col-sm-6 col-md-6 nina-banner2 reset-total">
-											<img
-												src="<?php echo base_url(); ?>uploads/<?php echo $value['imagen_derecha']; ?>"
-												title="" alt=""/>
-										</div>
+			<div data-thumb="<?php echo base_url(); ?>uploads/100x100/<?php echo $banners[1]['imagen_fondo']; ?>"
+				 data-src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>">
+				<div class="container cont-rsp">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 reset-total">
+							<div class="contenedor-texto">
+								<div class="col-xs-12 col-sm-12 col-md-12 img_banner1 reset-total">
+									<img src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['logo']; ?>"
+										 title="<?php echo $campania['titulo']; ?>"
+										 alt="<?php echo $campania['titulo']; ?>"/>
+								</div>
+								<div
+									class="col-xs-12 col-sm-12 col-md-<?php echo ($banners[1]['imagen_derecha'] != '') ? '6' : '4'; ?> reset-total texto_banner1">
+									<img
+										src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_izquierda']; ?>"
+										title="" alt=""/>
+									<?php if ($banners[1]['enlace'] != ''): ?>
+										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img
+												src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_enlace']; ?>"></a>
 									<?php endif; ?>
 								</div>
+
+								<?php if ($banners[1]['imagen_derecha'] != ''): ?>
+									<div class="col-xs-12 col-sm-6 col-md-6 nina-banner2 reset-total">
+										<img
+											src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_derecha']; ?>"
+											title="" alt=""/>
+									</div>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
-			<?php endforeach; ?>
+			</div>
 		</div>
 	</div>
 <?php endif; ?>
@@ -133,81 +131,7 @@
 	<section class="cont-back2" id="donaryserparte"
 			 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_segundo_contenido']; ?>); background-color: <?php echo $campania['color_fondo_segundo_contenido']; ?>">
 		<div class="container">
-			<div class="col-md-3 ctn-aport-sig reset-total">
-				<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['tercera_imagen']; ?>">
-			</div>
-			<div class="col-md-5 ctn-estad"
-				 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_estadisticas']; ?>);">
-				<div id="myCarousel4" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner bg-estad">
-						<?php foreach ($estadisticas as $key => $value): ?>
-							<div class="item <?php echo ($key == 0) ? ' active' : ''; ?>">
-								<div class="carousel-caption">
-									<span class="don-price"><?php echo $value['titulo']; ?></span>
-									<hr>
-									<p><?php echo nl2br($value['contenido']); ?></p>
-								</div>
-							</div>
-						<?php endforeach; ?>
-					</div>
-					<?php if (count($estadisticas) > 1): ?>
-						<a class="left carousel-control" href="#myCarousel4" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel4" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					<?php endif; ?>
-				</div>
-			</div>
-			<div class="col-md-4 ctn-don">
-				<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['cuarta_imagen']; ?>"
-					 class="titulo-abrir-puertas">
-				<div id="myCarousel2" class="carousel slide" data-ride="carousel">
-					<h2 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_tipo_donacion']; ?>);"><?php echo $campania['primer_tipo_donacion']; ?></h2>
-					<div class="carousel-inner bg-don-uni"
-						 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_primer_tipo_donacion']; ?>);">
 
-						<?php foreach ($precios_tipo_uno as $key => $value): ?>
-							<div class="item <?php echo ($key == 0) ? ' active' : ''; ?>">
-								<div class="carousel-caption">
-									<span class="don-price">S/ <?php echo number_format($value['precio'], 2); ?></span>
-									<p><?php echo nl2br($value['detalles']); ?></p>
-								</div>
-							</div>
-						<?php endforeach; ?>
-					</div>
-					<ol class="carousel-indicators">
-						<?php foreach ($precios_tipo_uno as $key => $value): ?>
-							<li data-target="#myCarousel2"
-								data-slide-to="<?php echo $key; ?>"<?php echo ($key == 0) ? ' class="active"' : ''; ?>></li>
-						<?php endforeach; ?>
-					</ol>
-				</div>
-
-				<div id="myCarousel3" class="carousel slide" data-ride="carousel">
-					<h2 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_tipo_donacion']; ?>);"><?php echo $campania['segundo_tipo_donacion']; ?></h2>
-					<div class="carousel-inner bg-don-uni bg-don-men">
-						<?php foreach ($precios_tipo_dos as $key => $value): ?>
-							<div class="item <?php echo ($key == 0) ? ' active' : ''; ?>">
-								<div class="carousel-caption">
-									<span class="don-price">S/ <?php echo number_format($value['precio'], 2); ?></span>
-									<p><?php echo nl2br($value['detalles']); ?></p>
-								</div>
-							</div>
-						<?php endforeach; ?>
-					</div>
-					<ol class="carousel-indicators">
-						<?php foreach ($precios_tipo_dos as $key => $value): ?>
-							<li data-target="#myCarousel3"
-								data-slide-to="<?php echo $key; ?>"<?php echo ($key == 0) ? ' class="active"' : ''; ?>></li>
-						<?php endforeach; ?>
-					</ol>
-					<p class="dona-ast"><?php echo nl2br($campania['alerta_asterisco']); ?></p>
-				</div>
-			</div>
 		</div>
 	</section>
 
