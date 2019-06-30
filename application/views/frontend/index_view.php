@@ -1,5 +1,9 @@
 <?php $this->load->view("frontend/templates/head_view"); ?>
 	<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJDSDBZ"
+					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 <?php $message = $this->session->flashdata('message'); ?>
 
 <?php $this->load->view("frontend/templates/header_view"); ?>
