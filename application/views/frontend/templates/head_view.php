@@ -45,6 +45,10 @@
         <link rel="stylesheet" href="<?php echo base_view();?>resources/camera_master/css/camera.css" id="camera-css" type="text/css" media="all"> 
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+        
         <style type="text/css">
             .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
                 opacity: inherit !important;

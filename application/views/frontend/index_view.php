@@ -27,8 +27,8 @@
 
 <?php if (isset($banners) AND count($banners) > 0): ?>
 	<div class="fluid_container clearfix" id="acercade">
-		<div class="camera_wrap camera_emboss" id="camera_wrap_4">
-			<div data-thumb="<?php echo base_url(); ?>uploads/100x100/<?php echo $banners[1]['imagen_fondo']; ?>"
+		<div class="banner-img" id="">
+			<div class="banner-img" style="background:url('<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>')center center no-repeat;"
 				 data-src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>">
 				<div class="container cont-rsp">
 					<div class="row">
@@ -46,7 +46,7 @@
 										title="" alt=""/>
 									<?php if ($banners[1]['enlace'] != ''): ?>
 										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img
-												src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_enlace']; ?>"></a>
+												src="<?php echo base_url(); ?>uploads/15531909711.png"></a>
 									<?php endif; ?>
 								</div>
 
@@ -128,10 +128,132 @@
 	<div class="medio-info-1"
 		 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['primer_separador_contenido']; ?>);"></div>
 
-	<section class="cont-back2" id="donaryserparte"
-			 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_segundo_contenido']; ?>); background-color: <?php echo $campania['color_fondo_segundo_contenido']; ?>">
+	<section class="cont-back2" id="donaryserparte"	 style="">
 		<div class="container">
-
+		  <div class="row">
+			<div class="col-xs-12 text-center title-section-2">
+			  <h2>¿Cómo abrir las <strong> puertas </strong> de su futuro?</h2>
+			</div>
+		  </div>
+		  <div class="row amount">
+		  	<div class="col-xs-12 col-md-offset-2 col-md-10 d-flex">
+			  <div class="col-25 d-flex"><h5>S/.35</h5></div>
+			  <div class="col-25 d-flex"><h5>S/.50</h5></div>
+			  <div class="col-25 d-flex"><h5>S/.100</h5></div>
+			  <div class="col-25 d-flex"><h5>S/.200</h5></div>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
+			  <h3>DONACIÓN <br> ÚNICA</h3>
+			</div>
+			<div class="col-xs-12 col-md-10 text-center">
+			 <div class="row slider-mensual">
+			  <div class="">
+			  	<div class="d-flex">
+				 <img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
+				 <div class="text-line-2">
+				 	<p>Capacitación en <br><strong>habilidades digitales</strong></p>
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.35</h5>
+				 </div>
+			    </div>	
+			  </div>
+			  <div>
+			  	<div class="d-flex">
+				  <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
+				  <div class="text-line-2">
+				 	<p>Capacitación en <br><strong>educación financiera</strong></p>
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.50</h5>
+				 </div>
+				</div>
+			  </div>
+			  <div>
+			   <div class="d-flex">
+				<img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
+				<div class="text-line-2">
+				 	<p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.100</h5>
+				 </div>
+			   </div>
+			  </div>
+			  <div>
+			   <div class="d-flex">
+				<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
+				<div class="text-line-2">
+				 	<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.200</h5>
+				 </div>
+			   </div>
+			  </div> 
+			</div>
+			</div>
+		  </div>
+		  <div class="row text-center">
+			<div class="col-xs-12 col-md-offset-2 col-md-7 text-line text-left">
+			  <p>*FORMACIÓN EN LIDERAZGO, EDUCACIÓN FINANCIERA, USO DE 
+			     HERRAMIENTAS DIGITALES Y DESARROLLO DE PROYECTO DE VIDA</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
+			  <h3>DONACIÓN <br>MENSUAL</h3>
+			</div>
+			<div class="col-xs-12 col-md-10 text-center">
+			 <div class="row slider-mensual-2">
+			  <div>
+			  	<div class="d-flex">
+				 <img src="<?php echo base_url(); ?>uploads/1-nina.png"/>
+				 <div class="text-line-2">
+				 	<p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA</strong></p> 
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.35</h5>
+				 </div>
+				</div>	 
+			  </div>
+			  <div>
+			   <div class="d-flex">
+				  <img src="<?php echo base_url(); ?>uploads/2-ninas.png"/>
+				  <div class="text-line-2">
+				 	<p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS</strong></p>
+				 </div>
+				 <div class="text-line-num">
+					<h5>S/.50</h5>
+				 </div> 
+			   </div>
+			  </div>
+			  <div>
+			  <div class="d-flex">
+			   <img src="<?php echo base_url(); ?>uploads/4-ninas.png"/>
+			   <div class="text-line-2">
+				 	<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS</strong></p>
+				</div>
+				<div class="text-line-num">
+					<h5>S/.100</h5>
+				 </div>  
+			  </div>
+			  </div>
+			  <div>
+			  	<div class="d-flex">
+					<img src="<?php echo base_url(); ?>uploads/6-ninas.png"/>
+					<div class="text-line-2">
+				 		<p>Formación <span>POR 1 AÑO </span> para: <br><strong>6 NIÑAS</strong></p>
+					 </div>
+					<div class="text-line-num">
+					<h5>S/.200</h5>
+				 	</div> 
+			    </div> 
+			  </div>
+			</div>
+		  </div>
 		</div>
 	</section>
 
@@ -416,13 +538,13 @@
 						</div>
 						<div class="cont-slider-range">
 							<div id="slider-range">
-								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default left"></span>
+								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default  left"></span>
 							</div>
 						</div>
 						<?php $rangos = array('uno', 'dos', 'tres', 'cuatro', 'cinco'); ?>
 						<div class="ctn-cant-nin">
 							<?php foreach ($rangos as $key => $value): ?>
-								<button class="cant-nin<?php echo ($key == 0) ? ' active' : ''; ?>">
+								<button class="cant-nin<?php echo ($key == 4) ? ' active' : ''; ?>">
 									<p><?php echo $campania['titulo_rango_' . $value]; ?></p>
 								</button>
 							<?php endforeach; ?>
