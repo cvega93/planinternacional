@@ -11,11 +11,11 @@
 	 </div>
 	 <ul class="lista-header">
 		<li><a class="menu-link scrollLink" href="#tipodedonaciones">ACERCA DE PLAN</a></li>
-		<li><a class="menu-link scrollLink" href="#contactanos">TIPO DE DONACIONES</a></li>
+		<li><a class="menu-link scrollLink" href="#donaryserparte">TIPO DE DONACIONES</a></li>
 		<li><a class="menu-link scrollLink" href="#foooter">CONTÁCTANOS</a></li>
 	 </ul>
 	  <div class="ct-donar">
-	  <a class="menu-link scrollLink" href="#donaryserparte"><img src="<?php echo base_url(); ?>uploads/donar.png" class="btn-donar"></a>
+	  <a class="menu-link scrollLink" href="#contactanos"><img src="<?php echo base_url(); ?>uploads/donar.png" class="btn-donar"></a>
       </div>
 	</div>
 	<div id="menu-container">

@@ -358,8 +358,8 @@ hr.style3{
 
 /*************************CONTENT 1*************************/
 .cont-back1{
-    padding-top: 0px;
-    padding-bottom: 68px;
+    padding-top: 60px;
+    padding-bottom: 15px;
     background: url(../img/1bg-info.png) no-repeat #0072ce;
     background-position-x: 432px;       
     background-position-y: 119px;
@@ -488,7 +488,7 @@ hr.style3{
 
 /***********************CONTENT 2**************************/
 .cont-back2{
-    padding-top: 0px;
+    padding-top: 65px;
     padding-bottom: 180px;
     background: #0067c2;
     background-size: 522px;
@@ -1031,7 +1031,7 @@ button.cant-nin{
 button:hover.cant-nin, button.cant-nin.active{
     background: transparent;
 }
-button:hover.cant-nin .num-cant-nin, button:hover.cant-nin p, button.cant-nin.active .num-cant-nin, button.cant-nin.active p{
+  button.cant-nin.active .num-cant-nin, button.cant-nin.active p{
     color: #FFF !important;
 }
 .num-cant-nin{
@@ -1493,6 +1493,9 @@ header img.hd-logo {
 }
 .slick-dots li.slick-active button{
     opacity:1;
+}
+button.cant-nin  {
+   cursor: initial;
 }
 @media (max-width: 768px){
     .title-section-2 h2 {
