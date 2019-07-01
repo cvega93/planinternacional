@@ -69,9 +69,9 @@
 <script src="https://checkout.culqi.com/js/v3"></script>
 
 <!--SCRIPT IMPORTANTE-->
-<!--<link href="--><?php //echo backend_view(); ?><!--css/validationEngine.jquery.css" rel="stylesheet">-->
-<!--<script src="--><?php //echo backend_view(); ?><!--js/jquery.validationEngine.js"></script>-->
-<!--<script src="--><?php //echo backend_view(); ?><!--js/jquery.validationEngine-es.js"></script>-->
+<link href="<?php echo backend_view(); ?>css/validationEngine.jquery.css" rel="stylesheet">
+<script src="<?php echo backend_view(); ?>js/jquery.validationEngine.js"></script>
+<script src="<?php echo backend_view(); ?>js/jquery.validationEngine-es.js"></script>
 <!---->
 
 
@@ -160,13 +160,27 @@
 	var _moneda = 'PEN';
 	var _monto = 0;
 	var _formulario = '';
+	var pedidoID = '';
 	//Culqi.publicKey = '<?php //echo $this->comercio; ?>//';
 	Culqi.publicKey = 'pk_test_CoIGsODjHdYb2fIX';
 
 	$(document).ready(function () {
-		$('#formularioPago').on('submit', function (e) {
-			// pagar(e, false);
+		$("#formularioPago").validationEngine();
+		$('#submitButton').on('click', function (e) {
+			e.preventDefault();
+			if ($("#formularioPago").validationEngine('validate')) {
+				console.log($("#formularioPago").validationEngine('validate'))
+				pagar();
+			}
 		});
+
+		$('#monto_pagar').on('change', function (val) {
+			if($(this).val() == 1) {
+				$('#otro_monto_input').show();
+			} else {
+				$('#otro_monto_input').hide();
+			}
+		})
 
 	});
 
@@ -262,10 +276,10 @@
 		// let moneda = $("input[name='tipo_moneda']:checked").val();
 		let moneda = $("input[name='tipo_moneda']:checked").val();
 		let tipo_donacion = String($("input[name='tipo_pago']:checked").val());
-		let monto = $('#monto_pagar').val();
+		let monto = $('#monto_pagar').val() == 1 ? $('#otro_monto').val() : $('#monto_pagar').val();
 		let email = $('#email').val();
 		let description = tipo_donacion === 1 ? "DONACIÓN ÚNICA" : "DONACIÓN MENSUAL";
-		console.log(tipo_donacion)
+
 		let settings = {
 			title: '<?php echo $campania['titulo']; ?>',
 			currency: moneda,
@@ -273,6 +287,16 @@
 			culqiEmail: email,
 			amount: monto * 100
 		};
+
+		let formPago = $('#formularioPago');
+		$.post('/test/crearUsuario', formPago.serialize(), function (res) {
+			console.log('ACA TAMOS ENVIANDO');
+			console.log(res.id);
+			pedidoID = res.id
+			$("#pedidoId").val(pedidoID);
+		}).done(function () {
+			console.log('aca tamos')
+		});
 
 		console.log(settings);
 		Culqi.settings(settings);
@@ -299,8 +323,15 @@
 			}, 150);
 		}
 	}
+
 	function send_form(event, post) {
-		// if (!post) event.preventDefault()
+		// if (!post) event.preventDefault()}
+		// let data = $('#formularioPago').serialize();
+		// console.log(data);
+		// $.post('/checkout', data, function (res) {
+		// 	console.log(res.id);
+		// });
+		// data['pedidoId'] = pedidoID;
 		$("#formularioPago").submit();
 	}
 </script>
