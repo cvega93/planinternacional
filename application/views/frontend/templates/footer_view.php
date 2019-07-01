@@ -83,6 +83,8 @@
 <script src="<?php echo backend_view(); ?>assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo base_view(); ?>resources/camera_master/scripts/camera.min.js"></script>
 
+<!--slick-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <!--<script type="text/javascript">-->
 <!--	// $('form').validationEngine();-->
@@ -110,12 +112,86 @@
 			range: true,
 			min: 0,
 			max: 5,
-			values: [0, <?php echo $campania['meta']; ?>],
+			values: [0, 1],
 			slide: function (event, ui) {
 				$("#amount_min").val(ui.values[0]);
+				console.log(ui.values[0])
 				$("#amount_max").val(ui.values[1]);
 			}
 		});
+
+		$('.slider-mensual').slick({
+  			dots: false,
+			arrows:false,
+  			infinite: false,
+  			speed: 300,
+  			slidesToShow: 4,
+  			slidesToScroll: 4,
+  			responsive: [
+    			{
+      			breakpoint: 1024,
+     			settings: {
+        		slidesToShow: 3,
+        		slidesToScroll: 3,
+        		infinite: true,
+        		dots: true
+      			}
+    			},
+    			{
+      			breakpoint: 600,
+      			settings: {
+        		slidesToShow: 2,
+        		slidesToScroll: 2
+      			}
+   				 },
+    			{
+      			breakpoint: 480,
+      			settings: {
+        		slidesToShow: 1,
+        		slidesToScroll: 1
+      			}
+    			}
+    			// You can unslick at a given breakpoint now by adding:
+    			// settings: "unslick"
+    			// instead of a settings object
+  				]
+				});
+				$('.slider-mensual-2').slick({
+  			dots: false,
+			arrows:false,
+  			infinite: false,
+  			speed: 300,
+  			slidesToShow: 4,
+  			slidesToScroll: 4,
+  			responsive: [
+    			{
+      			breakpoint: 1024,
+     			settings: {
+        		slidesToShow: 3,
+        		slidesToScroll: 3,
+        		infinite: true,
+        		dots: true
+      			}
+    			},
+    			{
+      			breakpoint: 600,
+      			settings: {
+        		slidesToShow: 2,
+        		slidesToScroll: 2
+      			}
+   				 },
+    			{
+      			breakpoint: 480,
+      			settings: {
+        		slidesToShow: 1,
+        		slidesToScroll: 1
+      			}
+    			}
+    			// You can unslick at a given breakpoint now by adding:
+    			// settings: "unslick"
+    			// instead of a settings object
+  				]
+				});
 
 		$('#myCarousel4').carousel({
 			autoplay: false,
