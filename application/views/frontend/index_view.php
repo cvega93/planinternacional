@@ -30,6 +30,25 @@
 	</style>
 
 <?php if (isset($banners) AND count($banners) > 0): ?>
+	<div id="loader">
+		La donación está siendo procesada. Por favor no abandones esta página
+		<img src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif" alt="">
+	</div>
+	<style>
+		#loader {
+			background: rgba(255,255,255,0.9);
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
+		}
+	</style>
 	<div class="fluid_container clearfix" id="acercade">
 		<div class="banner-img" id="">
 			<div class="banner-img" style="background:url('<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>')center center no-repeat;"
@@ -328,9 +347,11 @@
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
 											<div class="cont-select">
-												<select name="monto_total" class="validate[required]"
+												<select name="monto_total"
+														required
+														class="validate[required] required"
 														id="monto_pagar">
-													<option disabled="disabled" selected="selected">
+													<option disabled="disabled" selected="selected" value="">
 														Monto a donar
 													</option>
 													<option data-apoyo="" value="35" class="color-2">35.00</option>
@@ -340,6 +361,7 @@
 													<option value="1" data-apoyo="0" class="color-2">Otro Monto</option>
 												</select>
 											</div>
+											<span class="text-danger" id="error_monto" style="display: none">*Campo requerido</span>
 											<div id="otro_monto_input" style="display: none;">
 												<div class="col-md-12 ctn-doc reset-total">
 													<div class="col-md-12 reset-total">
@@ -410,8 +432,7 @@
 											<div class="cont-select" style="overflow:visible;">
 												<select name="pais" class="validate[required]"
 														id="pais_<?php echo $key; ?>">
-													<option value="" disabled="disabled" selected="selected">País
-													</option>
+													<option disabled="disabled" selected="selected">País</option>
 													<option value="AF">Afghanistan</option>
 													<option value="AL">Albania</option>
 													<option value="DZ">Algeria</option>
@@ -688,7 +709,7 @@
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
 											<div class="form-group">
 												<h5>Fecha de nacimiento</h5>
-												<input type="date" name="cumpleanios" class="validate[required]" value="">
+												<input type="date" name="cumpleanios" class="validate[required]">
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total genero">

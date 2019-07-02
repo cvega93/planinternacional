@@ -156,7 +156,7 @@
     			// instead of a settings object
   				]
 				});
-				$('.slider-mensual-2').slick({
+		$('.slider-mensual-2').slick({
   			dots: false,
 			arrows:false,
   			infinite: false,
@@ -241,12 +241,22 @@
 	Culqi.publicKey = 'pk_test_CoIGsODjHdYb2fIX';
 
 	$(document).ready(function () {
-		$("#formularioPago").validationEngine();
+
+		$("#formularioPago").validationEngine({
+			prettySelect : true,
+			validateNonVisibleFields: true,
+		});
+
 		$('#submitButton').on('click', function (e) {
 			e.preventDefault();
-			if ($("#formularioPago").validationEngine('validate')) {
-				console.log($("#formularioPago").validationEngine('validate'))
-				pagar();
+			if ($('#monto_pagar').val() == 0 ) {
+				$('#error_monto').show()
+			} else {
+				$('#error_monto').hide()
+				if ($("#formularioPago").validationEngine('validate')) {
+					console.log($("#formularioPago").validationEngine('validate'))
+					pagar();
+				}
 			}
 		});
 
@@ -366,15 +376,12 @@
 
 		let formPago = $('#formularioPago');
 		$.post('/test/crearUsuario', formPago.serialize(), function (res) {
-			console.log('ACA TAMOS ENVIANDO');
-			console.log(res.id);
-			pedidoID = res.id
+			pedidoID = res.id;
 			$("#pedidoId").val(pedidoID);
 		}).done(function () {
 			console.log('aca tamos')
 		});
 
-		console.log(settings);
 		Culqi.settings(settings);
 		// send_form(false, true);
 		Culqi.open();
@@ -408,6 +415,7 @@
 		// 	console.log(res.id);
 		// });
 		// data['pedidoId'] = pedidoID;
+		$('#loader').css('display', 'flex');
 		$("#formularioPago").submit();
 	}
 </script>
