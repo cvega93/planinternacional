@@ -45,8 +45,7 @@
 										src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_izquierda']; ?>"
 										title="" alt=""/>
 									<?php if ($banners[1]['enlace'] != ''): ?>
-										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img
-												src="<?php echo base_url(); ?>uploads/15531909711.png"></a>
+										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><span>DONAR</span></a>
 									<?php endif; ?>
 								</div>
 
@@ -426,15 +425,15 @@
 												<p>Género</p>
 											</div>
 											<div class="col-xs-8 col-sm-8 col-md-8 reset-total">
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
-													<label class="container-check">
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Masculino">
+													<label class="container-check"  >
 														M
 														<input type="radio" class="" onclick="" name="genero" id=""
 															   value="1"/>
 														<span class="checkmark"></span>
 													</label>
 												</div>
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Femenino">
 													<label class="container-check">
 														F
 														<input type="radio" class="" onclick="" name="genero" id=""

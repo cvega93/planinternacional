@@ -7,11 +7,13 @@
 	<?php endif; ?>
 	<div class="container header-web">
 	 <div class="ct-logo">
-	  <img src="https://uneteaplanperu.org.pe/uploads/1553281177.png" alt="unete-logo" class="hd-logo">
-	 </div>
+		<a href="https://uneteaplanperu.org.pe/">
+		<img src="<?php echo base_url(); ?>uploads/logo-plan.png" alt="unete-logo" class="hd-logo">	
+		</a>
+	</div>
 	 <ul class="lista-header">
-		<li><a class="menu-link scrollLink" href="#tipodedonaciones">ACERCA DE PLAN</a></li>
-		<li><a class="menu-link scrollLink" href="#donaryserparte">TIPO DE DONACIONES</a></li>
+		<li><a class="menu-link scrollLink" href="#tipodedonaciones">POR QUÉ DONAR</a></li>
+		<li><a class="menu-link scrollLink" href="#donaryserparte">TIPO DE DONACIÓN</a></li>
 		<li><a class="menu-link scrollLink" href="#foooter">CONTÁCTANOS</a></li>
 	 </ul>
 	  <div class="ct-donar">

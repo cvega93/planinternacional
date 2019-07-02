@@ -1,6 +1,26 @@
 <div class="clearfix"></div>
 <section class="texto-pie" style="background-color: <?php echo $campania['color_fondo_cuarto_contenido']; ?>;">
 	<div class="container">
+		<div class="col-md-12 text-center register-unete">
+		<h2>ÚNETE</h2>
+		<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "4390725",
+    formId: "2fca63a8-8e9d-4e2a-be9e-a66fc2894ba5"
+});
+</script>
+
+		</div>
+	</div>
+	<div class="container">
 		<div class="col-md-12 reset-total hidden-xs">
 			<h1><img src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_cuarto_contenido']; ?>"></h1>
 		</div>
@@ -94,6 +114,11 @@
 
 <!--menu script-->
 <script type="text/javascript">
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+	tooltipClass: "message",
+  })
+})
 	$(function () {
 
 		$("a.scrollLink").click(function (event) {
