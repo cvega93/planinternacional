@@ -1411,7 +1411,7 @@ header img.hd-logo {
 }
 }
 .banner-img{
-    background-size: cover;
+    background-size: cover!important;
 }
 .text-line p{
     color:#ffffff!important;
@@ -1496,6 +1496,36 @@ header img.hd-logo {
 }
 button.cant-nin  {
    cursor: initial;
+}
+.slick-slide {
+    height: auto!important;
+}
+.slick-prev.pull-left{
+    display: block;
+    margin: auto 0;
+    position: absolute;
+    bottom: 0;
+    top: -20px;
+    background: transparent;
+    border: 0;
+    font-size: 50px;
+    color: #ffffff;
+    z-index: 1000;
+    outline: none; 
+}
+.slick-next.pull-right{
+    display: block;
+    margin: auto 0;
+    position: absolute;
+    bottom: 0;
+    top: -20px;
+    right:0;
+    background: transparent;
+    border: 0;
+    font-size: 50px;
+    color: #ffffff;
+    z-index: 1000;
+    outline: none; 
 }
 @media (max-width: 768px){
     .title-section-2 h2 {

@@ -145,15 +145,15 @@
 		  </div>
 		  <div class="row d-flex">
 		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
-			  <h3>DONACIÓN <br> ÚNICA</h3>
+			  <h3>DONACIÓN <br> MENSUAL</h3>
 			</div>
 			<div class="col-xs-12 col-md-10 text-center">
 			 <div class="row slider-mensual">
 			  <div class="">
 			  	<div class="d-flex">
-				 <img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
+				 <img src="<?php echo base_url(); ?>uploads/1-nina.png"/>
 				 <div class="text-line-2">
-				 	<p>Capacitación en <br><strong>habilidades digitales</strong></p>
+				 <p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA*</strong></p> 
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.35</h5>
@@ -162,9 +162,9 @@
 			  </div>
 			  <div>
 			  	<div class="d-flex">
-				  <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
+				  <img src="<?php echo base_url(); ?>uploads/2-ninas.png"/>
 				  <div class="text-line-2">
-				 	<p>Capacitación en <br><strong>educación financiera</strong></p>
+				  <p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.50</h5>
@@ -173,9 +173,9 @@
 			  </div>
 			  <div>
 			   <div class="d-flex">
-				<img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
+				<img src="<?php echo base_url(); ?>uploads/4-ninas.png"/>
 				<div class="text-line-2">
-				 	<p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
+				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.100</h5>
@@ -184,9 +184,9 @@
 			  </div>
 			  <div>
 			   <div class="d-flex">
-				<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
+				<img src="<?php echo base_url(); ?>uploads/6-ninas.png"/>
 				<div class="text-line-2">
-				 	<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
+				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>6 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.200</h5>
@@ -204,15 +204,16 @@
 		  </div>
 		  <div class="row d-flex">
 		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
-			  <h3>DONACIÓN <br>MENSUAL</h3>
+			  <h3>DONACIÓN <br>ÚNICA</h3>
 			</div>
 			<div class="col-xs-12 col-md-10 text-center">
 			 <div class="row slider-mensual-2">
 			  <div>
 			  	<div class="d-flex">
-				 <img src="<?php echo base_url(); ?>uploads/1-nina.png"/>
+				 <img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
 				 <div class="text-line-2">
-				 	<p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA</strong></p> 
+				 <p>Capacitación en <br><strong>habilidades digitales</strong></p>
+				 
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.35</h5>
@@ -221,9 +222,10 @@
 			  </div>
 			  <div>
 			   <div class="d-flex">
-				  <img src="<?php echo base_url(); ?>uploads/2-ninas.png"/>
+				  <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
 				  <div class="text-line-2">
-				 	<p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS</strong></p>
+				  <p>Capacitación en <br><strong>educación financiera</strong></p>
+				 	
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/.50</h5>
@@ -232,9 +234,9 @@
 			  </div>
 			  <div>
 			  <div class="d-flex">
-			   <img src="<?php echo base_url(); ?>uploads/4-ninas.png"/>
+			   <img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
 			   <div class="text-line-2">
-				 	<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS</strong></p>
+			   <p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
 				</div>
 				<div class="text-line-num">
 					<h5>S/.100</h5>
@@ -243,9 +245,10 @@
 			  </div>
 			  <div>
 			  	<div class="d-flex">
-					<img src="<?php echo base_url(); ?>uploads/6-ninas.png"/>
+					<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
 					<div class="text-line-2">
-				 		<p>Formación <span>POR 1 AÑO </span> para: <br><strong>6 NIÑAS</strong></p>
+					<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
+				 	
 					 </div>
 					<div class="text-line-num">
 					<h5>S/.200</h5>
