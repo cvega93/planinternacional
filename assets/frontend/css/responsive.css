@@ -142,6 +142,7 @@
 		align-items: center;
 		display: flex;
 		font-family: "Veneer";
+		flex-direction: column;
 	}
 
 	.thanks-message .message {
@@ -156,7 +157,7 @@
 		flex: 0 0 auto;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-right: 50px;
+		margin-bottom: 30px;
 		padding: 0 2rem;
 		width: 445px;
 	}
@@ -178,6 +179,7 @@
 
 	.thanks-message .share-message {
 		flex: 1 1 auto;
+		margin-bottom: 40px;
 	}
 
 	.thanks-message .share-message p {
@@ -520,7 +522,7 @@
 	.contenedor-texto{
 		/*width: 92%;*/
 		/*margin: 40px;*/
-		height: 90vh;
+		height: 100vh;
 	}
 
 	.contenedor-texto h3, .contenedor-texto p{
@@ -1289,6 +1291,6 @@
 }
 @media only screen and (max-width: 991px){
 .texto_banner1 {
-    margin-top: 60px !important;
+    margin-top: 0px !important;
 }
 }

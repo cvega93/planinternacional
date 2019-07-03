@@ -68,8 +68,7 @@
 										src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_izquierda']; ?>"
 										title="" alt=""/>
 									<?php if ($banners[1]['enlace'] != ''): ?>
-										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img
-												src="<?php echo base_url(); ?>uploads/15531909711.png"></a>
+										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img src="<?php echo base_url(); ?>uploads/15531909711.png" alt="se-parte"></a>
 									<?php endif; ?>
 								</div>
 
@@ -160,10 +159,10 @@
 		  </div>
 		  <div class="row amount">
 		  	<div class="col-xs-12 col-md-offset-2 col-md-10 d-flex">
-			  <div class="col-25 d-flex"><h5>S/.35</h5></div>
-			  <div class="col-25 d-flex"><h5>S/.50</h5></div>
-			  <div class="col-25 d-flex"><h5>S/.100</h5></div>
-			  <div class="col-25 d-flex"><h5>S/.200</h5></div>
+			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 35</h5></div>
+			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover" >S/ 50</h5></div>
+			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 100</h5></div>
+			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 200</h5></div>
 			</div>
 		  </div>
 		  <div class="row d-flex">
@@ -179,7 +178,7 @@
 				 <p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA*</strong></p> 
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.35</h5>
+					<h5>S/ 35</h5>
 				 </div>
 			    </div>	
 			  </div>
@@ -190,7 +189,7 @@
 				  <p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.50</h5>
+					<h5>S/ 50</h5>
 				 </div>
 				</div>
 			  </div>
@@ -201,7 +200,7 @@
 				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.100</h5>
+					<h5>S/ 100</h5>
 				 </div>
 			   </div>
 			  </div>
@@ -209,10 +208,10 @@
 			   <div class="d-flex">
 				<img src="<?php echo base_url(); ?>uploads/6-ninas.png"/>
 				<div class="text-line-2">
-				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>6 NIÑAS*</strong></p>
+				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>8 NIÑAS*</strong></p>
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.200</h5>
+					<h5>S/ 200</h5>
 				 </div>
 			   </div>
 			  </div> 
@@ -239,7 +238,7 @@
 				 
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.35</h5>
+					<h5>S/ 35</h5>
 				 </div>
 				</div>	 
 			  </div>
@@ -251,7 +250,7 @@
 				 	
 				 </div>
 				 <div class="text-line-num">
-					<h5>S/.50</h5>
+					<h5>S/ 50</h5>
 				 </div> 
 			   </div>
 			  </div>
@@ -262,7 +261,7 @@
 			   <p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
 				</div>
 				<div class="text-line-num">
-					<h5>S/.100</h5>
+					<h5>S/ 100</h5>
 				 </div>  
 			  </div>
 			  </div>
@@ -274,7 +273,7 @@
 				 	
 					 </div>
 					<div class="text-line-num">
-					<h5>S/.200</h5>
+					<h5>S/ 200</h5>
 				 	</div> 
 			    </div> 
 			  </div>
@@ -683,15 +682,15 @@
 												<p>Género</p>
 											</div>
 											<div class="col-xs-8 col-sm-8 col-md-8 reset-total">
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
-													<label class="container-check">
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Masculino">
+													<label class="container-check"  >
 														M
 														<input type="radio" class="validate[required]" onclick="" name="genero" id=""
 															   value="Masculino"/>
 														<span class="checkmark"></span>
 													</label>
 												</div>
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Femenino">
 													<label class="container-check">
 														F
 														<input type="radio" class="validate[required]" onclick="" name="genero" id=""

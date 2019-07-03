@@ -170,7 +170,7 @@ a:hover{
 
 header{
 	border-top: 9px solid #0073d2;
-	z-index: 2;
+	z-index: 20;
 	position: fixed;
     width: 100%;
     background: #0073d2;
@@ -240,7 +240,7 @@ header .lista-header a {
    color:#ffffff;
 }
 header img.hd-logo{
-    max-width: 70%;
+    max-width: 80%;
 }
 .btn-donar{
     max-width: 100%;
@@ -263,7 +263,7 @@ header img.hd-logo{
 .header-web ul {
     display: flex;
     align-items: center;
-    align-items: center;
+    justify-content: flex-end;
     padding: 0;
     width: 60%;
 }
@@ -1399,7 +1399,7 @@ header img.hd-logo {
 }
 @media(max-width:520px){
     header img.hd-logo {
-        max-width: 100%;
+        max-width: 80%;
     }
     .btn-donar {
         max-width: 100%;
@@ -1426,6 +1426,7 @@ header img.hd-logo {
     font-size: 50px;
     line-height: 1.91;
     margin-bottom: 20px;
+    font-weight: 100!important;
 }
 .title-section-2 h2 strong {
    color:#fcd304!important;
@@ -1447,8 +1448,7 @@ header img.hd-logo {
 .col-25.d-flex h5{
   color: #0067b9;
   font-size: 35px;
-  background: #fcd304;
-  padding:0 15px;
+  padding:10px 40px;
 }
 .text-line-2 {
   position:absolute;
@@ -1527,6 +1527,14 @@ button.cant-nin  {
     z-index: 1000;
     outline: none; 
 }
+.register-unete {
+    padding-top:30px;
+}
+.register-unete h2 {
+    font-size:50px; 
+    color:#ffffff;
+    margin-bottom: 1rem;
+}
 @media (max-width: 768px){
     .title-section-2 h2 {
        line-height: 1.1; 
@@ -1551,4 +1559,97 @@ button.cant-nin  {
     .text-line-num{
         display:block;
     }
+}
+/* styles form*/
+.hbspt-form {
+    width: 82% !important;
+    margin: 0 auto!important;
+}
+.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field{
+    width: 50%!important;
+    display: inline-block!important;
+}
+.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field input, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field input, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field input, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field input {
+    width:80%;
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: 0;
+    margin: 10px 0 30px 0;
+}
+.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field label,.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field label, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field label, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field label  {
+    text-align: left;
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    font-family: "Veneer", Arial, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 100;
+}
+.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field{
+    width: 50%!important;
+    display: inline-block!important;
+}
+.hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field{
+    width: 50%;
+    display: inline-block!important;
+}
+.hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field{
+    float: right!important;
+    width: 50%!important;
+}
+label.hs-error-msg {
+    display: none!important;
+}
+input.hs-button.primary.large {
+    font-family: "Veneer", Arial, Tahoma, sans-serif;
+    background-color: #f2bc00 !important;
+    background-image: none !important;
+    text-align: center;
+    font-size: 24px;
+    color: #0073D6;
+    border-radius: 5px;
+    padding: 12px 32px;
+    border: none;
+    box-shadow: 1px 2px 6px #0067c2cc;
+    transition: all 0.3s ease-in-out 0s;
+}
+input.hs-button.primary.large:hover{
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74; 
+}
+.hbspt-form .submitted-message{
+    font-family: "Veneer", Arial, Tahoma, sans-serif;
+    color: #f5d40e;
+    font-size: 40px;
+    overflow: hidden!important;
+    padding: 30px;
+}
+
+@media (max-width:768px){
+  .hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field{
+      width:100%!important;
+      display: block;
+  } 
+  .hbspt-form {
+    width: 100% !important;
+    margin: 0 auto!important;
+  }
+}
+.message{
+    height: 40px!important;
+    border-radius: 0!important;
+    display: flex;
+    align-items: center;
+    font-family: "Veneer", Arial, Tahoma, sans-serif!important;
+    color: #33a474 !important;
+}
+#message.thanks-message{
+    width: 120%;
+}
+@media (max-width:768px){
+    #message.thanks-message{
+        width: 100%;
+    } 
 }
