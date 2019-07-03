@@ -170,7 +170,7 @@ a:hover{
 
 header{
 	border-top: 9px solid #0073d2;
-	z-index: 2;
+	z-index: 20;
 	position: fixed;
     width: 100%;
     background: #0073d2;
@@ -1426,6 +1426,7 @@ header img.hd-logo {
     font-size: 50px;
     line-height: 1.91;
     margin-bottom: 20px;
+    font-weight: 100!important;
 }
 .title-section-2 h2 strong {
    color:#fcd304!important;
@@ -1447,8 +1448,7 @@ header img.hd-logo {
 .col-25.d-flex h5{
   color: #0067b9;
   font-size: 35px;
-  background: #fcd304;
-  padding:0 15px;
+  padding:10px 40px;
 }
 .text-line-2 {
   position:absolute;
@@ -1626,9 +1626,7 @@ input.hs-button.primary.large:hover{
     overflow: hidden!important;
     padding: 30px;
 }
-.btn-banner.scrollLink {
-    display: block;
-}
+
 @media (max-width:768px){
   .hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field{
       width:100%!important;
