@@ -261,6 +261,11 @@
 		$("#formularioPago").validationEngine({
 			prettySelect : true,
 			validateNonVisibleFields: true,
+			autoHidePrompt: true,
+			// Delay before auto-hide
+			autoHideDelay: 2000,
+			// Fade out duration while hiding the validations
+			fadeDuration: 0.3
 		});
 
 		$('#submitButton').on('click', function (e) {

@@ -148,7 +148,8 @@ class Website extends MY_Controller
 				'lastname' => $data['apellido_paterno'],
 				'fecha_de_nacimiento' => $data['cumpleanios'],
 
-				'terminos_condiciones' => true,
+				'terminos_condiciones' => 'true',
+
 				'country' => $data['country'],
 				'tipo_de_documento' => $data['tipo_documento'],
 				'n_mero_de_documento' => $data['numero_documento'],
@@ -392,15 +393,14 @@ class Website extends MY_Controller
 						$array['tarjeta'] = $charge->source->iin->card_brand;
 						$array['estado'] = $charge->outcome->type;
 						$this->save_transaction($array);
-//						var_dump($charge);
-//						die();
-						//if($data['codigo_respuesta'] == 'venta_exitosa' OR $data['codigo_respuesta'] == 'venta_registrada')
+
 						if ($charge->outcome->code == 'AUT0000') {
 							$_detalle = $charge->outcome->user_message;
 							$activado = 1;
 							$message = array('type' => 'success', 'content' => 'Se registró la donación correctamente.');
 						} else {
-							$message = array('type' => 'danger', 'content' => $charge);
+//							var_dump($charge);
+							$message = array('type' => 'danger', 'content' => $charge->outcome->user_message);
 							$activado = 0;
 						}
 
@@ -493,17 +493,16 @@ class Website extends MY_Controller
 							redirect("/", "refresh");
 						}
 					} catch (Exception $e) {
-						var_dump($e);
-//						$array['charge'] = $charge->id;
+						$array['charge'] = $charge->id;
 //						$array['bank'] = $charge->source->iin->issuer->name;
 //						$array['tarjeta'] = $charge->source->iin->card_brand;
-						$array['estado'] = $e->getMessage();
-						$this->save_transaction($array);
 						$response = (array)json_decode($e->getMessage());
-
+						$array['estado'] = $response['merchant_message'];
+						$this->save_transaction($array);
 						$activado = 0;
-						$message = array('type' => 'danger', 'content' => $response['merchant_message']);
+						$message = array('type' => 'danger', 'content' => $response['user_message']);
 						$this->session->set_flashdata('message', $message);
+//						$this->redirect_back();
 						redirect("/", "refresh");
 					}
 				} else {
@@ -519,6 +518,18 @@ class Website extends MY_Controller
 		} else {
 			redirect("/", "refresh");
 		}
+	}
+	function redirect_back()
+	{
+		if(isset($_SERVER['HTTP_REFERER']))
+		{
+			header('Location: '.$_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			header('Location: http://'.$_SERVER['SERVER_NAME']);
+		}
+		exit;
 	}
 
 	function avisos()
@@ -600,58 +611,58 @@ class Website extends MY_Controller
 
 	function getCountry ($country_code) {
 		$countries = [
-			"AF"=>"Afghanistan<",
-			"AL"=>"Albania<",
-			"DZ"=>"Algeria<",
-			"AS"=>"American Samoa<",
-			"AD"=>"Andorra<",
-			"AO"=>"Angola<",
-			"AI"=>"Anguilla<",
-			"AQ"=>"Antarctica<",
-			"AG"=>"Antigua and Barbuda<",
-			"AR"=>"Argentina<",
-			"AM"=>"Armenia<",
-			"AW"=>"Aruba<",
-			"AU"=>"Australia<",
-			"AT"=>"Austria<",
-			"AZ"=>"Azerbaijan<",
-			"BS"=>"Bahamas<",
-			"BH"=>"Bahrain<",
-			"BD"=>"Bangladesh<",
-			"BB"=>"Barbados<",
-			"BY"=>"Belarus<",
-			"BE"=>"Belgium<",
-			"BZ"=>"Belize<",
-			"BJ"=>"Benin<",
-			"BM"=>"Bermuda<",
-			"BT"=>"Bhutan<",
-			"BO"=>"Bolivia<",
-			"BA"=>"Bosnia and Herzegowina<",
-			"BW"=>"Botswana<",
-			"BV"=>"Bouvet Island<",
-			"BR"=>"Brazil<",
-			"IO"=>"British Indian Ocean Territory<",
-			"BN"=>"Brunei Darussalam<",
-			"BG"=>"Bulgaria<",
-			"BF"=>"Burkina Faso<",
-			"BI"=>"Burundi<",
-			"KH"=>"Cambodia<",
-			"CM"=>"Cameroon<",
-			"CA"=>"Canada<",
-			"CV"=>"Cape Verde<",
-			"KY"=>"Cayman Islands<",
-			"CF"=>"Central African Republic<",
-			"TD"=>"Chad<",
-			"CL"=>"Chile<",
-			"CN"=>"China<",
-			"CX"=>"Christmas Island<",
-			"CC"=>"Cocos (Keeling) Islands<",
-			"CO"=>"Colombia<",
-			"KM"=>"Comoros<",
-			"CG"=>"Congo<",
-			"CD"=>"Congo, the Democratic Republic of the<",
-			"CK"=>"Cook Islands<",
-			"CR"=>"Costa Rica<",
+			"AF"=>"Afghanistan",
+			"AL"=>"Albania",
+			"DZ"=>"Algeria",
+			"AS"=>"American Samoa",
+			"AD"=>"Andorra",
+			"AO"=>"Angola",
+			"AI"=>"Anguilla",
+			"AQ"=>"Antarctica",
+			"AG"=>"Antigua and Barbuda",
+			"AR"=>"Argentina",
+			"AM"=>"Armenia",
+			"AW"=>"Aruba",
+			"AU"=>"Australia",
+			"AT"=>"Austria",
+			"AZ"=>"Azerbaijan",
+			"BS"=>"Bahamas",
+			"BH"=>"Bahrain",
+			"BD"=>"Bangladesh",
+			"BB"=>"Barbados",
+			"BY"=>"Belarus",
+			"BE"=>"Belgium",
+			"BZ"=>"Belize",
+			"BJ"=>"Benin",
+			"BM"=>"Bermuda",
+			"BT"=>"Bhutan",
+			"BO"=>"Bolivia",
+			"BA"=>"Bosnia and Herzegowina",
+			"BW"=>"Botswana",
+			"BV"=>"Bouvet Island",
+			"BR"=>"Brazil",
+			"IO"=>"British Indian Ocean Territory",
+			"BN"=>"Brunei Darussalam",
+			"BG"=>"Bulgaria",
+			"BF"=>"Burkina Faso",
+			"BI"=>"Burundi",
+			"KH"=>"Cambodia",
+			"CM"=>"Cameroon",
+			"CA"=>"Canada",
+			"CV"=>"Cape Verde",
+			"KY"=>"Cayman Islands",
+			"CF"=>"Central African Republic",
+			"TD"=>"Chad",
+			"CL"=>"Chile",
+			"CN"=>"China",
+			"CX"=>"Christmas Island",
+			"CC"=>"Cocos (Keeling) Islands",
+			"CO"=>"Colombia",
+			"KM"=>"Comoros",
+			"CG"=>"Congo",
+			"CD"=>"Congo, the Democratic Republic of the",
+			"CK"=>"Cook Islands",
+			"CR"=>"Costa Rica",
 			"CI"=>"Cote d'Ivoire",
 			"HR"=>"Croatia (Hrvatska",
 			"CU"=>"Cuba",
@@ -713,10 +724,10 @@ class Website extends MY_Controller
 			"KZ"=>"Kazakhstan",
 			"KE"=>"Kenya",
 			"KI"=>"Kiribati",
-			"KP"=>"Korea, Democratic People's Republic of<",
-			"KR"=>"Korea, Republic of<",
-			"KW"=>"Kuwait<",
-			"KG"=>"Kyrgyzstan<",
+			"KP"=>"Korea, Democratic People's Republic of",
+			"KR"=>"Korea, Republic of",
+			"KW"=>"Kuwait",
+			"KG"=>"Kyrgyzstan",
 			"LA"=>"Lao People's Democratic Republic",
 			"LV"=>"Latvia",
 			"LB"=>"Lebanon",
@@ -768,7 +779,7 @@ class Website extends MY_Controller
 			"PA"=>"Panama",
 			"PG"=>"Papua New Guinea",
 			"PY"=>"Paraguay",
-			"PE"=>"Peru",
+			"PE"=>"Perú",
 			"PH"=>"Philippines",
 			"PN"=>"Pitcairn",
 			"PL"=>"Poland",
