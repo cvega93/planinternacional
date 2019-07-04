@@ -2,7 +2,8 @@
 <section class="texto-pie" style="background-color: <?php echo $campania['color_fondo_cuarto_contenido']; ?>;">
 	<div class="container">
 		<div class="col-md-12 text-center register-unete">
-		<h2>ÚNETE</h2>
+		<h2>¿QUIERES SER PARTE DEL PLAN?</h2>
+		<p>Sí, deseo más información sobre cómo promover los <strong>derechos de la niñez </strong> y <strong> la igualdad de las niñas.</strong></p>
 		<!--[if lte IE 8]>
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 <![endif]-->

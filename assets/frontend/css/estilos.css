@@ -701,7 +701,7 @@ hr.style3{
     /*background-position-x: 115%;
     background-position-y: 123%;*/
     background-position-x: 50%;
-    background-position-y: 87%;
+    background-position-y: 90%;
     /*height: 893px;*/
 }
 
@@ -1532,8 +1532,13 @@ button.cant-nin  {
 }
 .register-unete h2 {
     font-size:50px; 
-    color:#ffffff;
+    color:#f5d40e;
     margin-bottom: 1rem;
+    font-weight: 100!important;
+}
+.register-unete p {
+   color: #ffffff; 
+   margin-bottom: 30px;
 }
 @media (max-width: 768px){
     .title-section-2 h2 {
@@ -1569,14 +1574,14 @@ button.cant-nin  {
     width: 50%!important;
     display: inline-block!important;
 }
-.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field input, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field input, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field input, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field input {
+.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field input, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field input, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field input, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field input,.hs_lastname.hs-lastname.hs-fieldtype-text.field.hs-form-field input {
     width:80%;
     border-radius: 8px;
     padding: 10px 10px;
     border: 0;
     margin: 10px 0 30px 0;
 }
-.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field label,.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field label, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field label, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field label  {
+.hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field label,.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field label, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field label, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field label,.hs_lastname.hs-lastname.hs-fieldtype-text.field.hs-form-field label {
     text-align: left;
     display: flex;
     width: 75%;
@@ -1589,6 +1594,10 @@ button.cant-nin  {
 .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field{
     width: 50%!important;
     display: inline-block!important;
+}
+.hs_lastname.hs-lastname.hs-fieldtype-text.field.hs-form-field{
+    width: 50%;
+    display: inline-block!important;   
 }
 .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field{
     width: 50%;
@@ -1626,9 +1635,11 @@ input.hs-button.primary.large:hover{
     overflow: hidden!important;
     padding: 30px;
 }
-
+.text-p-align {
+    text-align: right;
+}
 @media (max-width:768px){
-  .hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field{
+  .hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field, .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field, .hs_fecha_de_nacimiento.hs-fecha_de_nacimiento.hs-fieldtype-date.field.hs-form-field, .hs_genero.hs-genero.hs-fieldtype-text.field.hs-form-field,.hs_lastname.hs-lastname.hs-fieldtype-text.field.hs-form-field{
       width:100%!important;
       display: block;
   } 
@@ -1652,4 +1663,7 @@ input.hs-button.primary.large:hover{
     #message.thanks-message{
         width: 100%;
     } 
+    .text-p-align {
+        text-align: center;
+    }
 }
