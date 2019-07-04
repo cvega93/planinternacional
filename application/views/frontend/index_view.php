@@ -183,7 +183,7 @@
 			  </div>
 			  <div>
 			   <div class="d-flex">
-				<img src="<?php echo base_url(); ?>uploads/6-ninas.png"/>
+				<img src="<?php echo base_url(); ?>uploads/8-ninas.png"/>
 				<div class="text-line-2">
 				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>8 NIÑAS*</strong></p>
 				 </div>
@@ -211,8 +211,7 @@
 			  	<div class="d-flex">
 				 <img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
 				 <div class="text-line-2">
-				 <p>Capacitación en <br><strong>habilidades digitales</strong></p>
-				 
+				  <p>Capacitación en <br><strong>habilidades digitales</strong></p>
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/ 35</h5>
@@ -221,10 +220,9 @@
 			  </div>
 			  <div>
 			   <div class="d-flex">
-				  <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
+				 <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
 				  <div class="text-line-2">
 				  <p>Capacitación en <br><strong>educación financiera</strong></p>
-				 	
 				 </div>
 				 <div class="text-line-num">
 					<h5>S/ 50</h5>
@@ -235,27 +233,32 @@
 			  <div class="d-flex">
 			   <img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
 			   <div class="text-line-2">
-			   <p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
+			   	<p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
 				</div>
 				<div class="text-line-num">
 					<h5>S/ 100</h5>
 				 </div>  
-			  </div>
+			    </div>
 			  </div>
 			  <div>
 			  	<div class="d-flex">
 					<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
 					<div class="text-line-2">
-					<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
-				 	
-					 </div>
+						<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
+				 	</div>
 					<div class="text-line-num">
-					<h5>S/ 200</h5>
+						<h5>S/ 200</h5>
 				 	</div> 
 			    </div> 
 			  </div>
 			</div>
 		  </div>
+		  
+    </div>
+    <div class="row text-center">
+			<div class="col-xs-12 col-md-12 text-line text-p-align">
+			  <p>*Los montos de donación son referenciales</p>
+			</div>
 		</div>
 	</section>
 
