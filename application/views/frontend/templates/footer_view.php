@@ -116,7 +116,7 @@
 <script type="text/javascript">
 	$(function () {
   $('[data-toggle="tooltip"]').tooltip({
-	tooltipClass: "message",
+	tooltipClass: "message-tooltip",
   })
 })
 	$(function () {
