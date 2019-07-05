@@ -219,9 +219,9 @@
 			</div>
 		  </div>
 		  <div class="row text-center">
-			<div class="col-xs-12 col-md-offset-2 col-md-7 text-line text-left">
-			  <p>*FORMACIÓN EN LIDERAZGO, EDUCACIÓN FINANCIERA, USO DE 
-			     HERRAMIENTAS DIGITALES Y DESARROLLO DE PROYECTO DE VIDA</p>
+			<div class="col-xs-12 col-md-offset-2 col-md-10 text-line text-justify">
+			  <p>*Formación en liderazgo, educación financiera, uso de 
+			     herramientas digitales y desarrollo de proyecto de vida.</p>
 			</div>
 		  </div>
 		  <div class="row d-flex">
@@ -280,7 +280,7 @@
     </div>
     <div class="row text-center">
 			<div class="col-xs-12 col-md-12 text-line text-p-align">
-			  <p>*Los montos de donación son referenciales</p>
+			  <p>*Los montos de donación son referenciales.</p>
 			</div>
 		</div>
 	</section>

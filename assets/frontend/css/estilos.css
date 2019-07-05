@@ -1032,17 +1032,17 @@ button:hover.cant-nin, button.cant-nin.active{
     background: transparent;
 }
   button.cant-nin.active .num-cant-nin, button.cant-nin.active p{
-    color: #FFF !important;
+    color: #0067c2 !important;
 }
 .num-cant-nin{
     font-size: 28px;
-    color: #0067c2;
+    color: #ffffff;
     font-family: "Veneer", Arial, Tahoma, sans-serif;  
     text-align: center;
 }
 .cant-nin p{
     font-size: 14px;
-    color: #0067c2;
+    color: #ffffff;
     font-family: "Veneer", Arial, Tahoma, sans-serif;  
     text-align: center;
     margin-bottom: 0 !important;
@@ -1131,7 +1131,9 @@ ul.aliados-cont{
     border-radius: 50%;
     font-size: 15px;
     transition: all 0.3s ease-in-out 0s;
-
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
 }
 
 .social-footer li a:hover{
@@ -1528,7 +1530,7 @@ button.cant-nin  {
     outline: none; 
 }
 .register-unete {
-    padding-top:30px;
+    padding-top:40px;
 }
 .register-unete h2 {
     font-size:50px; 
@@ -1635,6 +1637,20 @@ input.hs-button.primary.large:hover{
     overflow: hidden!important;
     padding: 30px;
 }
+.hs_terminos_condiciones.hs-terminos_condiciones.hs-fieldtype-booleancheckbox.field.hs-form-field{
+    display: flex;
+    align-items: center;
+    color:#ffffff;
+    width: 88%;
+    margin:0 auto 15px auto;
+}
+.hs_terminos_condiciones.hs-terminos_condiciones.hs-fieldtype-booleancheckbox.field.hs-form-field input{
+    margin:4px 4px 0 0;
+}
+.hs_terminos_condiciones.hs-terminos_condiciones.hs-fieldtype-booleancheckbox.field.hs-form-field a {
+    color:#ffffff!important;
+    text-decoration: underline!important; 
+}
 .text-p-align {
     text-align: right;
 }
@@ -1647,9 +1663,12 @@ input.hs-button.primary.large:hover{
     width: 100% !important;
     margin: 0 auto!important;
   }
+  .hs_terminos_condiciones.hs-terminos_condiciones.hs-fieldtype-booleancheckbox.field.hs-form-field{
+    width:75%; 
+  }
 }
-.message{
-    height: 40px!important;
+.message-tooltip{
+    height:40px!important;
     border-radius: 0!important;
     display: flex;
     align-items: center;

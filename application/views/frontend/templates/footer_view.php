@@ -1,25 +1,24 @@
 <div class="clearfix"></div>
 <section class="texto-pie" style="background-color: <?php echo $campania['color_fondo_cuarto_contenido']; ?>;">
-	<div class="container">
+	<div class="container" id="unete">
 		<div class="col-md-12 text-center register-unete">
 		<h2>¿QUIERES SER PARTE DEL PLAN?</h2>
 		<p>Sí, deseo más información sobre cómo promover los <strong>derechos de la niñez </strong> y <strong> la igualdad de las niñas.</strong></p>
 		<!--[if lte IE 8]>
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-<![endif]-->
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-<!--[if lte IE 8]>
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-<![endif]-->
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "4390725",
-    formId: "2fca63a8-8e9d-4e2a-be9e-a66fc2894ba5"
-});
-</script>
-
-		</div>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+      portalId: "4390725",
+      formId: "2fca63a8-8e9d-4e2a-be9e-a66fc2894ba5"
+      });
+    </script>
+   </div>
 	</div>
 	<div class="container">
 		<div class="col-md-12 reset-total hidden-xs">
@@ -120,7 +119,7 @@
 <script type="text/javascript">
 	$(function () {
   $('[data-toggle="tooltip"]').tooltip({
-	tooltipClass: "message",
+	tooltipClass: "message-tooltip",
   })
 })
 	$(function () {
