@@ -1032,17 +1032,17 @@ button:hover.cant-nin, button.cant-nin.active{
     background: transparent;
 }
   button.cant-nin.active .num-cant-nin, button.cant-nin.active p{
-    color: #FFF !important;
+    color: #0067c2 !important;
 }
 .num-cant-nin{
     font-size: 28px;
-    color: #0067c2;
+    color: #ffffff;
     font-family: "Veneer", Arial, Tahoma, sans-serif;  
     text-align: center;
 }
 .cant-nin p{
     font-size: 14px;
-    color: #0067c2;
+    color: #ffffff;
     font-family: "Veneer", Arial, Tahoma, sans-serif;  
     text-align: center;
     margin-bottom: 0 !important;
