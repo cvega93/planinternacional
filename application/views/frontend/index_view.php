@@ -300,6 +300,7 @@
 						</div>
 						<div class="clearfix"></div>
 						<div class="tab-content bg-formulario">
+							<?php if (!$message['type'] == 'success'): ?>
 							<div id="unete" class="tab-pane fade in active">
 								<form method="POST" action="<?php echo base_url(); ?>checkout" id="formularioPago">
 									<input type="hidden" name="descripcion" id="" value=""/>
@@ -714,7 +715,7 @@
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
 											<div class="form-group">
 												<h5>Fecha de nacimiento</h5>
-												<input type="date" name="cumpleanios" class="validate[required]">
+												<input type="text" id="datepicker" name="cumpleanios" class="validate[required]">
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total genero">
@@ -764,6 +765,7 @@
 									</div>
 								</form>
 							</div>
+							<?php endif; ?>
 						</div>
 
 						<?php if ($message['type'] == 'success'): ?>

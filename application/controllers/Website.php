@@ -493,6 +493,7 @@ class Website extends MY_Controller
 							redirect("/", "refresh");
 						}
 					} catch (Exception $e) {
+//						var_dump($e);
 						$array['charge'] = $charge->id;
 //						$array['bank'] = $charge->source->iin->issuer->name;
 //						$array['tarjeta'] = $charge->source->iin->card_brand;
@@ -500,7 +501,10 @@ class Website extends MY_Controller
 						$array['estado'] = $response['merchant_message'];
 						$this->save_transaction($array);
 						$activado = 0;
-						$message = array('type' => 'danger', 'content' => $response['user_message']);
+
+						$mensaje = "<center>Queremos informarte que ya estás registrado como donante mensual. Si deseas realizar algún cambio en tu donación escríbenos a <a href='mailto:donaciones.peru@plan-international.org'>donaciones.peru@plan-international.org</a> ¡Muchas gracias por tu aporte!</center>";
+
+						$message = array('type' => 'danger', 'content' => $response['client_message'] ? $response['client_message'] : $mensaje);
 						$this->session->set_flashdata('message', $message);
 //						$this->redirect_back();
 						redirect("/", "refresh");

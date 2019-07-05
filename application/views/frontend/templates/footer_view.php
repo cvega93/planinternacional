@@ -103,7 +103,10 @@
 <!--		src="--><?php //echo base_view(); ?><!--resources/camera_master/scripts/jquery.easing.1.3.js"></script>-->
 <script src="<?php echo backend_view(); ?>assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo base_view(); ?>resources/camera_master/scripts/camera.min.js"></script>
+<script type="text/javascript" src="<?php echo backend_view(); ?>datepicker.min.js"></script>
+<link href="<?php echo backend_view(); ?>datepicker.min.css" rel="stylesheet" type="text/css" />
 
+<!--<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>-->
 <!--slick-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -283,6 +286,12 @@
 	Culqi.publicKey = 'pk_test_CoIGsODjHdYb2fIX';
 
 	$(document).ready(function () {
+
+		$('#datepicker').datepicker({
+			startDate: '01/01/1919',
+			endDate: '05/07/2019',
+			startView: 2
+		});
 
 		$("#formularioPago").validationEngine({
 			prettySelect : true,
