@@ -1,33 +1,35 @@
 <?php $this->load->view("frontend/templates/head_view"); ?>
-	<body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJDSDBZ"
-					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJDSDBZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 <?php $message = $this->session->flashdata('message'); ?>
 
 <?php $this->load->view("frontend/templates/header_view"); ?>
-	<style type="text/css">
-		@media only screen and (max-width: 991px) {
-			.cont-video {
-				background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_video_responsive']; ?>) !important;
-			}
-
-			.ctn-estad {
-				background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_estadisticas_responsive']; ?>) !important;
-			}
+<style type="text/css">
+	@media only screen and (max-width: 991px) {
+		.cont-video {
+			background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_video_responsive']; ?>) !important;
 		}
 
-		<?php if(@$message['type'] == 'success'): ?>
-		@media screen and (max-width: 1920px) {
-			.img-ninas3 {
-				padding-bottom: 590px;
-			}
+		.ctn-estad {
+			background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_estadisticas_responsive']; ?>) !important;
 		}
+	}
 
-		<?php endif; ?>
+	<?php if(@$message['type'] == 'success'): ?>
+	@media screen and (max-width: 1920px) {
+		.img-ninas3 {
+			padding-bottom: 590px;
+		}
+	}
 
-	</style>
+	<?php endif; ?>
+
+</style>
 
 <?php if (isset($banners) AND count($banners) > 0): ?>
 	<div id="loader">
@@ -36,7 +38,7 @@
 	</div>
 	<style>
 		#loader {
-			background: rgba(255,255,255,0.9);
+			background: rgba(255, 255, 255, 0.9);
 			position: fixed;
 			z-index: 999;
 			top: 0;
@@ -51,7 +53,8 @@
 	</style>
 	<div class="fluid_container clearfix" id="acercade">
 		<div class="banner-img" id="">
-			<div class="banner-img" style="background:url('<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>')center center no-repeat;"
+			<div class="banner-img"
+				 style="background:url('<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>')center center no-repeat;"
 				 data-src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_fondo']; ?>">
 				<div class="container cont-rsp">
 					<div class="row">
@@ -68,7 +71,10 @@
 										src="<?php echo base_url(); ?>uploads/<?php echo $banners[1]['imagen_izquierda']; ?>"
 										title="" alt=""/>
 									<?php if ($banners[1]['enlace'] != ''): ?>
-										<a href="<?php echo $banners[1]['enlace']; ?>" class="btn-banner scrollLink"><img src="<?php echo base_url(); ?>uploads/15531909711.png" alt="se-parte"></a>
+										<a href="<?php echo $banners[1]['enlace']; ?>"
+										   class="btn-banner scrollLink"><img
+												src="<?php echo base_url(); ?>uploads/15531909711.png"
+												alt="se-parte"></a>
 									<?php endif; ?>
 								</div>
 
@@ -88,211 +94,222 @@
 	</div>
 <?php endif; ?>
 
-	<section class="cont-back1" id="tipodedonaciones"
-			 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_primer_contenido']; ?>); background-color:<?php echo $campania['color_fondo_primer_contenido']; ?>;">
-		<div class="container">
-			<div class="col-xs-12 col-sm-12 col-md-5 reset-total-rsp">
-				<div class="col-xs-12 col-sm-12 col-md-12 reset-total-rsp">
-					<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['primera_imagen'] ?>">
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
-					<!-- div class="col-xs-12 col-sm-12 col-md-4 ctn-llave visible-lg">
+<section class="cont-back1" id="tipodedonaciones"
+		 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_primer_contenido']; ?>); background-color:<?php echo $campania['color_fondo_primer_contenido']; ?>;">
+	<div class="container">
+		<div class="col-xs-12 col-sm-12 col-md-5 reset-total-rsp">
+			<div class="col-xs-12 col-sm-12 col-md-12 reset-total-rsp">
+				<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['primera_imagen'] ?>">
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
+				<!-- div class="col-xs-12 col-sm-12 col-md-4 ctn-llave visible-lg">
 						<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_video']; ?>" />
 					</div -->
-					<div class="col-xs-12 col-sm-12 col-md-9 bg-info-b">
-						<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['segunda_imagen']; ?>"/>
-					</div>
+				<div class="col-xs-12 col-sm-12 col-md-9 bg-info-b">
+					<img src="<?php echo base_url(); ?>uploads/<?php echo $campania['segunda_imagen']; ?>"/>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-7 reset-total-rsp">
-				<div class="col-xs-12 col-sm-12 col-md-12 cont-video"
-					 style="background-image:url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_video']; ?>);">
-					<iframe width="100%" height="" src="//www.youtube.com/embed/<?php echo $campania['video']; ?>"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12">
-					<div class="cont-test">
-						<h2>Testimonios</h2>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 reset-total-rsp">
+			<div class="col-xs-12 col-sm-12 col-md-12 cont-video"
+				 style="background-image:url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_video']; ?>);">
+				<iframe width="100%" height="" src="//www.youtube.com/embed/<?php echo $campania['video']; ?>"
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="cont-test">
+					<h2>Testimonios</h2>
 
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-								<?php foreach ($testimonios as $key => $value): ?>
-									<li data-target="#myCarousel"
-										data-slide-to="<?php echo $key; ?>"<?php echo ($key == 0) ? ' class="active"' : ''; ?>></li>
-								<?php endforeach; ?>
-							</ol>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<?php foreach ($testimonios as $key => $value): ?>
+								<li data-target="#myCarousel"
+									data-slide-to="<?php echo $key; ?>"<?php echo ($key == 0) ? ' class="active"' : ''; ?>></li>
+							<?php endforeach; ?>
+						</ol>
 
-							<div class="carousel-inner bg-testimonios"
-								 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_testimonios']; ?>);">
-								<?php foreach ($testimonios as $key => $value): ?>
-									<div class="item <?php echo ($key == 0) ? 'active' : ''; ?>">
-										<div class="carousel-caption">
-											<p><?php echo nl2br($value['comentario']); ?></p>
-											<div class="detail-test">
-												<span class="name-nina"><?php echo $value['titulo']; ?></span>
-												<span
-													class="age-nina"><?php echo $value['edad']; ?> años, <?php echo $value['ubicacion']; ?></span>
-											</div>
+						<div class="carousel-inner bg-testimonios"
+							 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_testimonios']; ?>);">
+							<?php foreach ($testimonios as $key => $value): ?>
+								<div class="item <?php echo ($key == 0) ? 'active' : ''; ?>">
+									<div class="carousel-caption">
+										<p><?php echo nl2br($value['comentario']); ?></p>
+										<div class="detail-test">
+											<span class="name-nina"><?php echo $value['titulo']; ?></span>
+											<span
+												class="age-nina"><?php echo $value['edad']; ?> años, <?php echo $value['ubicacion']; ?></span>
 										</div>
 									</div>
-								<?php endforeach; ?>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="medio-info-1"
+	 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['primer_separador_contenido']; ?>);"></div>
+
+<section class="cont-back2" id="donaryserparte" style="">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center title-section-2">
+				<h2>¿Cómo abrir las <strong> puertas </strong> de su futuro?</h2>
+			</div>
+		</div>
+		<div class="row amount">
+			<div class="col-xs-12 col-md-offset-2 col-md-10 d-flex">
+				<div class="col-25 d-flex"><h5
+						style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">
+						S/ 35</h5></div>
+				<div class="col-25 d-flex"><h5
+						style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">
+						S/ 50</h5></div>
+				<div class="col-25 d-flex"><h5
+						style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">
+						S/ 100</h5></div>
+				<div class="col-25 d-flex"><h5
+						style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">
+						S/ 200</h5></div>
+			</div>
+		</div>
+		<div class="row d-flex">
+			<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
+				<h3>DONACIÓN <br> MENSUAL</h3>
+			</div>
+			<div class="col-xs-12 col-md-10 text-center">
+				<div class="row slider-mensual">
+					<div class="">
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/1-nina.png"/>
+							<div class="text-line-2">
+								<p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA*</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 35</h5>
 							</div>
 						</div>
-
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/2-ninas.png"/>
+							<div class="text-line-2">
+								<p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS*</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 50</h5>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/4-ninas.png"/>
+							<div class="text-line-2">
+								<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS*</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 100</h5>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/8-ninas.png"/>
+							<div class="text-line-2">
+								<p>Formación <span>POR 1 AÑO </span> para: <br><strong>8 NIÑAS*</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 200</h5>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<div class="medio-info-1"
-		 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['primer_separador_contenido']; ?>);"></div>
-
-	<section class="cont-back2" id="donaryserparte"	 style="">
-		<div class="container">
-		  <div class="row">
-			<div class="col-xs-12 text-center title-section-2">
-			  <h2>¿Cómo abrir las <strong> puertas </strong> de su futuro?</h2>
-			</div>
-		  </div>
-		  <div class="row amount">
-		  	<div class="col-xs-12 col-md-offset-2 col-md-10 d-flex">
-			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 35</h5></div>
-			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover" >S/ 50</h5></div>
-			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 100</h5></div>
-			  <div class="col-25 d-flex"><h5 style="background:url(<?php echo base_url(); ?>uploads/1553319558.png)center no-repeat; background-size:cover">S/ 200</h5></div>
-			</div>
-		  </div>
-		  <div class="row d-flex">
-		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
-			  <h3>DONACIÓN <br> MENSUAL</h3>
-			</div>
-			<div class="col-xs-12 col-md-10 text-center">
-			 <div class="row slider-mensual">
-			  <div class="">
-			  	<div class="d-flex">
-				 <img src="<?php echo base_url(); ?>uploads/1-nina.png"/>
-				 <div class="text-line-2">
-				 <p>Formación <span>POR 1 AÑO </span>para:<br><strong>1 NIÑA*</strong></p> 
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 35</h5>
-				 </div>
-			    </div>	
-			  </div>
-			  <div>
-			  	<div class="d-flex">
-				  <img src="<?php echo base_url(); ?>uploads/2-ninas.png"/>
-				  <div class="text-line-2">
-				  <p>Formación <span>POR 1 AÑO </span> para: <br><strong>2 NIÑAS*</strong></p>
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 50</h5>
-				 </div>
-				</div>
-			  </div>
-			  <div>
-			   <div class="d-flex">
-				<img src="<?php echo base_url(); ?>uploads/4-ninas.png"/>
-				<div class="text-line-2">
-				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>4 NIÑAS*</strong></p>
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 100</h5>
-				 </div>
-			   </div>
-			  </div>
-			  <div>
-			   <div class="d-flex">
-				<img src="<?php echo base_url(); ?>uploads/8-ninas.png"/>
-				<div class="text-line-2">
-				<p>Formación <span>POR 1 AÑO </span> para: <br><strong>8 NIÑAS*</strong></p>
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 200</h5>
-				 </div>
-			   </div>
-			  </div> 
-			</div>
-			</div>
-		  </div>
-		  <div class="row text-center">
+		<div class="row text-center">
 			<div class="col-xs-12 col-md-offset-2 col-md-10 text-line text-justify">
-			  <p>*Formación en liderazgo, educación financiera, uso de 
-			     herramientas digitales y desarrollo de proyecto de vida.</p>
-			</div>
-		  </div>
-		  <div class="row d-flex">
-		  	<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
-			  <h3>DONACIÓN <br>ÚNICA</h3>
-			</div>
-			<div class="col-xs-12 col-md-10 text-center">
-			 <div class="row slider-mensual-2">
-			  <div>
-			  	<div class="d-flex">
-				 <img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
-				 <div class="text-line-2">
-				  <p>Capacitación en <br><strong>habilidades digitales</strong></p>
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 35</h5>
-				 </div>
-				</div>	 
-			  </div>
-			  <div>
-			   <div class="d-flex">
-				 <img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
-				  <div class="text-line-2">
-				  <p>Capacitación en <br><strong>educación financiera</strong></p>
-				 </div>
-				 <div class="text-line-num">
-					<h5>S/ 50</h5>
-				 </div> 
-			   </div>
-			  </div>
-			  <div>
-			  <div class="d-flex">
-			   <img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
-			   <div class="text-line-2">
-			   	<p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de vida</strong></p>
-				</div>
-				<div class="text-line-num">
-					<h5>S/ 100</h5>
-				 </div>  
-			    </div>
-			  </div>
-			  <div>
-			  	<div class="d-flex">
-					<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
-					<div class="text-line-2">
-						<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
-				 	</div>
-					<div class="text-line-num">
-						<h5>S/ 200</h5>
-				 	</div> 
-			    </div> 
-			  </div>
-			</div>
-		  </div>
-		  
-    </div>
-    <div class="row text-center">
-			<div class="col-xs-12 col-md-12 text-line text-p-align">
-			  <p>*Los montos de donación son referenciales.</p>
+				<p>*Formación en liderazgo, educación financiera, uso de
+					herramientas digitales y desarrollo de proyecto de vida.</p>
 			</div>
 		</div>
-	</section>
+		<div class="row d-flex">
+			<div class="col-xs-12 col-md-2 text-center text-donacion d-flex">
+				<h3>DONACIÓN <br>ÚNICA</h3>
+			</div>
+			<div class="col-xs-12 col-md-10 text-center">
+				<div class="row slider-mensual-2">
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/nina-mouse.png"/>
+							<div class="text-line-2">
+								<p>Capacitación en <br><strong>habilidades digitales</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 35</h5>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/nina-sube.png"/>
+							<div class="text-line-2">
+								<p>Capacitación en <br><strong>educación financiera</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 50</h5>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/nina-habilidades.png"/>
+							<div class="text-line-2">
+								<p>Capacitación en <strong>habilidades</strong> <br><strong>sociales y plan de
+										vida</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 100</h5>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex">
+							<img src="<?php echo base_url(); ?>uploads/nina-liderazgo.png"/>
+							<div class="text-line-2">
+								<p>Capacitación en liderazgo <br><strong>sociales y plan de vida</strong></p>
+							</div>
+							<div class="text-line-num">
+								<h5>S/ 200</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<!--div class="medio-info-2"></div-->
+		</div>
+		<div class="row text-center">
+			<div class="col-xs-12 col-md-12 text-line text-p-align">
+				<p>*Los montos de donación son referenciales.</p>
+			</div>
+		</div>
+</section>
 
-	<section class="cont-back3" id="contactanos"
-			 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_tercer_contenido']; ?>);">
-		<div class="img-ninas3">
-			<div class="container">
+<!--div class="medio-info-2"></div-->
+
+<section class="cont-back3" id="contactanos"
+		 style="background-image: url(<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_tercer_contenido']; ?>);">
+	<div class="img-ninas3">
+		<div class="container">
+			<?php if (!$message['type'] == 'success'): ?>
 				<div class="col-xs-12 col-sm-12 col-md-12 cont-rsp-padd">
 					<div class="col-xs-12 col-sm-12 col-md-10 ctn-formulario">
+
 						<div class="col-md-12 reset-total cont-form-don">
 							<h3><?php echo $campania['dona']; ?></h3>
 							<span style="font-size: 18px;"><?php echo $campania['subtitulo_dona']; ?>
@@ -300,7 +317,6 @@
 						</div>
 						<div class="clearfix"></div>
 						<div class="tab-content bg-formulario">
-							<?php if (!$message['type'] == 'success'): ?>
 							<div id="unete" class="tab-pane fade in active">
 								<form method="POST" action="<?php echo base_url(); ?>checkout" id="formularioPago">
 									<input type="hidden" name="descripcion" id="" value=""/>
@@ -313,7 +329,7 @@
 											<div class="col-xs-6 col-sm-6 col-md-6">
 												<label class="container-check">
 													Mensual
-													<input type="radio"  name="tipo_pago" id="d1" value="2" checked />
+													<input type="radio" name="tipo_pago" id="d1" value="2" checked/>
 													<span class="checkmark"></span>
 												</label>
 											</div>
@@ -325,7 +341,8 @@
 												</label>
 											</div>
 										</div>
-										<hr><br><br><br>
+										<hr>
+										<br><br><br>
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
 											<h5>Tipo de moneda:</h5>
 											<div class="col-xs-6 col-sm-6 col-md-6">
@@ -336,7 +353,7 @@
 														   id="soles"
 														   value="PEN"
 														   checked
-														   />
+													/>
 													<span class="checkmark"></span>
 												</label>
 											</div>
@@ -346,7 +363,7 @@
 													<input type="radio"
 														   name="tipo_moneda"
 														   id="dolares"
-														   value="USD" />
+														   value="USD"/>
 													<span class="checkmark"></span>
 												</label>
 											</div>
@@ -420,7 +437,8 @@
 														Tipo de documento
 													</option>
 													<option data-apoyo="" value="dni" class="color-2">DNI</option>
-													<option data-apoyo="" value="pasaporte" class="color-2">Pasaporte</option>
+													<option data-apoyo="" value="pasaporte" class="color-2">Pasaporte
+													</option>
 													<option data-apoyo="" value="ce" class="color-2">CE</option>
 													<option value="otro" data-apoyo="0" class="color-2">Otro</option>
 												</select>
@@ -566,7 +584,8 @@
 													<option value="LT">Lithuania</option>
 													<option value="LU">Luxembourg</option>
 													<option value="MO">Macau</option>
-													<option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+													<option value="MK">Macedonia, The Former Yugoslav Republic of
+													</option>
 													<option value="MG">Madagascar</option>
 													<option value="MW">Malawi</option>
 													<option value="MY">Malaysia</option>
@@ -634,7 +653,8 @@
 													<option value="SB">Solomon Islands</option>
 													<option value="SO">Somalia</option>
 													<option value="ZA">South Africa</option>
-													<option value="GS">South Georgia and the South Sandwich Islands</option>
+													<option value="GS">South Georgia and the South Sandwich Islands
+													</option>
 													<option value="ES">Spain</option>
 													<option value="LK">Sri Lanka</option>
 													<option value="SH">St. Helena</option>
@@ -686,18 +706,22 @@
 												<p>Género</p>
 											</div>
 											<div class="col-xs-8 col-sm-8 col-md-8 reset-total">
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Masculino">
-													<label class="container-check"  >
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total"
+													 data-toggle="tooltip" data-placement="top" title="Masculino">
+													<label class="container-check">
 														M
-														<input type="radio" class="validate[required]" onclick="" name="genero" id=""
+														<input type="radio" class="validate[required]" onclick=""
+															   name="genero" id=""
 															   value="Masculino"/>
 														<span class="checkmark"></span>
 													</label>
 												</div>
-												<div class="col-xs-4 col-sm-4 col-md-4 reset-total" data-toggle="tooltip" data-placement="top" title="Femenino">
+												<div class="col-xs-4 col-sm-4 col-md-4 reset-total"
+													 data-toggle="tooltip" data-placement="top" title="Femenino">
 													<label class="container-check">
 														F
-														<input type="radio" class="validate[required]" onclick="" name="genero" id=""
+														<input type="radio" class="validate[required]" onclick=""
+															   name="genero" id=""
 															   value="Femenino"/>
 														<span class="checkmark"></span>
 													</label>
@@ -715,7 +739,8 @@
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total">
 											<div class="form-group">
 												<h5>Fecha de nacimiento</h5>
-												<input type="text" id="datepicker" name="cumpleanios" class="validate[required]">
+												<input type="text" id="datepicker" name="cumpleanios"
+													   class="validate[required]">
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12 reset-total genero">
@@ -727,7 +752,8 @@
 												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
 													<label class="container-check">
 														Si
-														<input type="radio" class="" onclick="" name="tienes_hijos" id=""
+														<input type="radio" class="" onclick="" name="tienes_hijos"
+															   id=""
 															   value="si"/>
 														<span class="checkmark"></span>
 													</label>
@@ -735,7 +761,8 @@
 												<div class="col-xs-4 col-sm-4 col-md-4 reset-total">
 													<label class="container-check">
 														No
-														<input type="radio" class="" onclick="" name="tienes_hijos" id=""
+														<input type="radio" class="" onclick="" name="tienes_hijos"
+															   id=""
 															   value="no"/>
 														<span class="checkmark"></span>
 													</label>
@@ -765,35 +792,8 @@
 									</div>
 								</form>
 							</div>
-							<?php endif; ?>
 						</div>
 
-						<?php if ($message['type'] == 'success'): ?>
-							<div id="message" class="thanks-message">
-								<!-- div class="logo-plan"><img src="<?php echo base_url(); ?>uploads/<?php echo $campania['logo_gracias']; ?>" alt="<?php echo $this->configuracion['titulo']; ?>" /></div -->
-								<div class="flex-box">
-									<div class="message">
-										<div class="title"><?php echo $campania['titulo_gracias']; ?></div>
-										<p><?php echo nl2br($campania['contenido_gracias']); ?></p>
-									</div>
-
-									<div class="share-message">
-										<p><?php echo nl2br($campania['subtitulo_derecha']); ?></p>
-										<div class="slogan"><?php echo $campania['slogan']; ?></div>
-										<div class="rrss">
-											<a href="javascript:;"
-											   onclick="window.open('//www.facebook.com/sharer/sharer.php?u=<?php echo base_url(); ?>', '_blank', 'width=500,height=300');"><i
-													class="mdi mdi-facebook"></i></a>
-											<a href="javascript:;"
-											   onclick="window.open('//twitter.com/?status=<?php echo $campania['titulo_seo']; ?> <?php echo base_url(); ?>', '_blank', 'width=500,height=300');"><i
-													class="mdi mdi-twitter"></i></a>
-											<a href="mailto:?subject=<?php echo $campania['titulo_seo']; ?>&body=<?php echo $campania['descripcion_seo']; ?>: <?php echo base_url(); ?>"
-											   target="_blank"><i class="mdi mdi-email"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						<?php endif; ?>
 					</div>
 
 					<div class="col-xs-12 col-sm-12 col-md-2">
@@ -815,8 +815,74 @@
 						</div>
 					</div>
 				</div>
+			<?php endif; ?>
+
+			<?php if ($message['type'] == 'success'): ?>
+				<div class="col-xs-12 col-sm-12 col-md-10 ctn-formulario">
+					<div id="message" class="thanks-message">
+						<!-- div class="logo-plan"><img src="<?php echo base_url(); ?>uploads/<?php echo $campania['logo_gracias']; ?>" alt="<?php echo $this->configuracion['titulo']; ?>" /></div -->
+						<div class="flex-box">
+							<div class="message">
+								<div class="title"><?php echo $campania['titulo_gracias']; ?></div>
+								<p><?php echo nl2br($campania['contenido_gracias']); ?></p>
+							</div>
+							<div class="share-message">
+								<p><?php echo nl2br($campania['subtitulo_derecha']); ?></p>
+								<div class="slogan"><?php echo $campania['slogan']; ?></div>
+								<div class="rrss">
+									<a href="javascript:;"
+									   onclick="window.open('//www.facebook.com/sharer/sharer.php?u=<?php echo base_url(); ?>', '_blank', 'width=500,height=300');"><i
+											class="mdi mdi-facebook"></i></a>
+									<a href="javascript:;"
+									   onclick="window.open('//twitter.com/?status=<?php echo $campania['titulo_seo']; ?> <?php echo base_url(); ?>', '_blank', 'width=500,height=300');"><i
+											class="mdi mdi-twitter"></i></a>
+									<a href="mailto:?subject=<?php echo $campania['titulo_seo']; ?>&body=<?php echo $campania['descripcion_seo']; ?>: <?php echo base_url(); ?>"
+									   target="_blank"><i class="mdi mdi-email"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+
+<div class="clearfix"></div>
+<section class="texto-pie" style="background-color: <?php echo $campania['color_fondo_cuarto_contenido']; ?>;">
+	<?php if (!$message['type'] == 'success'): ?>
+		<div class="container" id="unete">
+			<div class="col-md-12 text-center register-unete">
+				<h2>¿QUIERES SER PARTE DEL PLAN?</h2>
+				<p>Sí, deseo más información sobre cómo promover los <strong>derechos de la niñez </strong> y <strong>
+						la igualdad de las niñas.</strong></p>
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<script>
+					hbspt.forms.create({
+						portalId: "4390725",
+						formId: "2fca63a8-8e9d-4e2a-be9e-a66fc2894ba5"
+					});
+				</script>
 			</div>
 		</div>
-	</section>
+	<?php endif; ?>
+	<div class="container">
+		<div class="col-md-12 reset-total hidden-xs">
+			<h1><img src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_cuarto_contenido']; ?>"></h1>
+		</div>
+		<div class="col-xs-12 reset-total hidden-sm hidden-md hidden-lg">
+			<h1 class="texto-pie2"><img
+					src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_cuarto_contenido_responsive']; ?>">
+			</h1>
+		</div>
+	</div>
+</section>
 
 <?php $this->load->view("frontend/templates/footer_view"); ?>

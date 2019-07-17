@@ -484,7 +484,7 @@ class Website extends MY_Controller
 
 							if ($compra['tipo_pago'] == 1) // Donación Única..
 							{
-								$_update = array('activado' => $activado, 'detalle' => $_detalle, 'cargo' => $charge->id, 'html' => $_html);
+								$_update = array('activado' => $array['estado'], 'detalle' => $_detalle, 'cargo' => $charge->id, 'html' => $_html);
 							}
 							$this->module_model->actualizar('pagos', $_update, $pedidoId);
 

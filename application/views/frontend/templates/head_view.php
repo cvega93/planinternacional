@@ -1,7 +1,7 @@
 t<!DOCTYPE HTML>
 <html>
 	<head>
-    	<title><?php echo $this->configuracion['titulo']; ?></title>
+    	<title>Plan International Perú | Donación</title>
 
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>        
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">	    

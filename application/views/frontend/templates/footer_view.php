@@ -1,50 +1,17 @@
-<div class="clearfix"></div>
-<section class="texto-pie" style="background-color: <?php echo $campania['color_fondo_cuarto_contenido']; ?>;">
-	<div class="container" id="unete">
-		<div class="col-md-12 text-center register-unete">
-		<h2>¿QUIERES SER PARTE DEL PLAN?</h2>
-		<p>Sí, deseo más información sobre cómo promover los <strong>derechos de la niñez </strong> y <strong> la igualdad de las niñas.</strong></p>
-		<!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-    <![endif]-->
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-    <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-    <![endif]-->
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-    <script>
-      hbspt.forms.create({
-      portalId: "4390725",
-      formId: "2fca63a8-8e9d-4e2a-be9e-a66fc2894ba5"
-      });
-    </script>
-   </div>
-	</div>
-	<div class="container">
-		<div class="col-md-12 reset-total hidden-xs">
-			<h1><img src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_cuarto_contenido']; ?>"></h1>
-		</div>
-		<div class="col-xs-12 reset-total hidden-sm hidden-md hidden-lg">
-			<h1 class="texto-pie2"><img
-					src="<?php echo base_url(); ?>uploads/<?php echo $campania['fondo_cuarto_contenido_responsive']; ?>">
-			</h1>
-		</div>
-	</div>
-</section>
-
 <footer id="foooter">
 	<div class="container">
 		<div class="col-sm-6 col-md-offset-1 col-md-5 datos-footer">
 			<h5><?php echo $campania['titulo']; ?></h5>
 			<ul>
-				<li><i class="fas fa-envelope"></i> <a href="mailto:<?php echo $campania['email_contacto']; ?>"><?php echo $campania['email_contacto']; ?></a>
+				<li><i class="fas fa-envelope"></i> <a
+						href="mailto:<?php echo $campania['email_contacto']; ?>"><?php echo $campania['email_contacto']; ?></a>
 				</li>
 				<li><i class="fas fa-phone"></i> <?php echo $campania['telefono']; ?></li>
 				<li><i class="fas fa-map-marker-alt"></i> <?php echo $campania['direccion']; ?></li>
 			</ul>
 			<h5>
 				<a<?php if ($campania['destino_enlace'] != ''): ?> href="<?php echo $campania['destino_enlace']; ?>" target="_blank"<?php else: ?> href="javascript:;"<?php endif; ?>
-					class="link-foot2"><?php echo $campania['titulo_enlace']; ?> <i
+					class="link-foot2">www.plan-international.org <i
 						class="fas fa-arrow-circle-right"></i></a></h5>
 			<div class="col-md-12 copyright reset-total">
 				<h5 class="link-foot2">Síguenos en:</h5>
@@ -71,7 +38,7 @@
 		<hr>
 		<div class="col-md-12">
 			<ul class="aliados-cont">
-				<li><h5 style="color: #58cae7"><?php echo $campania['titulo_aliados']; ?></h5></li>
+				<li><h5 style="color: #58cae7">NUESTROS ALIADOS <br> <small style="color: #58cae7">EN DISTINTOS PROYECTOS</small></h5></li>
 				<?php foreach ($aliados as $key => $value): ?>
 					<li><img src="<?php echo base_url(); ?>uploads/<?php echo $value['imagen']; ?>"
 							 title="<?php echo $value['titulo']; ?>" alt="<?php echo $value['titulo']; ?>"
@@ -103,7 +70,7 @@
 <script src="<?php echo backend_view(); ?>assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo base_view(); ?>resources/camera_master/scripts/camera.min.js"></script>
 <script type="text/javascript" src="<?php echo backend_view(); ?>datepicker.min.js"></script>
-<link href="<?php echo backend_view(); ?>datepicker.min.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo backend_view(); ?>datepicker.min.css" rel="stylesheet" type="text/css"/>
 
 <!--<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>-->
 <!--slick-->
@@ -114,14 +81,13 @@
 <!--</script>-->
 
 
-
 <!--menu script-->
 <script type="text/javascript">
 	$(function () {
-  $('[data-toggle="tooltip"]').tooltip({
-	tooltipClass: "message-tooltip",
-  })
-})
+		$('[data-toggle="tooltip"]').tooltip({
+			tooltipClass: "message-tooltip",
+		})
+	})
 	$(function () {
 
 		$("a.scrollLink").click(function (event) {
@@ -149,93 +115,93 @@
 		});
 
 		$('.slider-mensual').slick({
-  			dots: false,
-			arrows:false,
-  			infinite: false,
-  			speed: 300,
-  			slidesToShow: 4,
-  			slidesToScroll: 4,
-  			responsive: [
-    			{
-      			breakpoint: 1024,
-     			settings: {
-        		slidesToShow: 3,
-        		slidesToScroll: 3,
-        		infinite: true,
-        		dots: true
-      			}
-    			},
-    			{
-      			breakpoint: 600,
-      			settings: {
-        		slidesToShow: 2,
-        		slidesToScroll: 2,
-				infinite: true,
-				arrows: true,
-            	prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-            	nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-      			}
-   				 },
-    			{
-      			breakpoint: 480,
-      			settings: {
-        		slidesToShow: 1,
-        		slidesToScroll: 1,
-				infinite: true,
-				arrows: true,
-            	prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-            	nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-      			}
-    			}
-    			// You can unslick at a given breakpoint now by adding:
-    			// settings: "unslick"
-    			// instead of a settings object
-  				]
-				});
+			dots: false,
+			arrows: false,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+						infinite: true,
+						arrows: true,
+						prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+						nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						arrows: true,
+						prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+						nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+					}
+				}
+				// You can unslick at a given breakpoint now by adding:
+				// settings: "unslick"
+				// instead of a settings object
+			]
+		});
 		$('.slider-mensual-2').slick({
-  			dots: false,
-			arrows:false,
-  			infinite: false,
-  			speed: 300,
-  			slidesToShow: 4,
-  			slidesToScroll: 4,
-  			responsive: [
-    			{
-      			breakpoint: 1024,
-     			settings: {
-        		slidesToShow: 3,
-        		slidesToScroll: 3,
-        		infinite: true,
-        		dots: true
-      			}
-    			},
-    			{
-      			breakpoint: 600,
-      			settings: {
-        		slidesToShow: 2,
-        		slidesToScroll: 2,
-				infinite: true,
-				arrows: true,
-            	prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-            	nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-      			}
-      			},
-    			{
-      			breakpoint: 480,
-      			settings: {
-        		slidesToShow: 1,
-        		slidesToScroll: 1,
-				infinite: true,
-				arrows: true,
-            	prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-            	nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-      			}
-    			}
-    			// You can unslick at a given breakpoint now by adding:
-    			// settings: "unslick"
-    			// instead of a settings object
-  				]
-				});
+			dots: false,
+			arrows: false,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+						infinite: true,
+						arrows: true,
+						prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+						nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						arrows: true,
+						prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+						nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+					}
+				}
+				// You can unslick at a given breakpoint now by adding:
+				// settings: "unslick"
+				// instead of a settings object
+			]
+		});
 
 		$('#myCarousel4').carousel({
 			autoplay: false,
@@ -275,6 +241,23 @@
 </script>
 
 <script type="text/javascript">
+	(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (factory(global.jQuery));
+}(this, (function ($) {
+  'use strict';
+
+  $.fn.datepicker.languages['es-ES'] = {
+    format: 'dd/mm/yyyy',
+    days: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+    daysShort: ['Dom','Lun','Mar','Mie','Jue','Vie','Sab'],
+    daysMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
+    weekStart: 1,
+    months: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+    monthsShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic']
+  };
+})));
 	var tipo_pago = 1;
 	var _description = '';
 	var _moneda = 'PEN';
@@ -286,14 +269,16 @@
 
 	$(document).ready(function () {
 
+
 		$('#datepicker').datepicker({
 			startDate: '01/01/1919',
 			endDate: '05/07/2019',
-			startView: 2
+			startView: 2, 
+			language: 'es-ES'
 		});
 
 		$("#formularioPago").validationEngine({
-			prettySelect : true,
+			prettySelect: true,
 			validateNonVisibleFields: true,
 			autoHidePrompt: true,
 			// Delay before auto-hide
@@ -304,7 +289,7 @@
 
 		$('#submitButton').on('click', function (e) {
 			e.preventDefault();
-			if ($('#monto_pagar').val() == 0 ) {
+			if ($('#monto_pagar').val() == 0) {
 				$('#error_monto').show()
 			} else {
 				$('#error_monto').hide()
@@ -316,7 +301,7 @@
 		});
 
 		$('#monto_pagar').on('change', function (val) {
-			if($(this).val() == 1) {
+			if ($(this).val() == 1) {
 				$('#otro_monto_input').show();
 			} else {
 				$('#otro_monto_input').hide();
@@ -325,7 +310,7 @@
 
 	});
 
-	function validar_documento(elemento, id){
+	function validar_documento(elemento, id) {
 		var value = $(elemento).val();
 
 		if (id == undefined) {
@@ -347,6 +332,7 @@
 			}
 		}
 	}
+
 	function validar_otro_monto(elemento, id) {
 		var monto_minimo_1 = <?php echo $campania['monto_minimo_1']; ?>;
 		var monto_minimo_2 = <?php echo $campania['monto_minimo_2']; ?>;
@@ -390,9 +376,11 @@
 			configurar_monto(elemento);
 		}
 	}
+
 	function configurar_descripcion(description) {
 		_description = description;
 	}
+
 	function configurar_moneda(moneda) {
 		$('.monto_minimo').addClass('hidden');
 		_moneda = moneda;
@@ -405,6 +393,7 @@
 			$('#otro_monto_1, #otro_monto_2').removeAttr('class').addClass('form-control');
 		}, 10);
 	}
+
 	function configurar_monto(elemento) {
 		_monto = $(elemento).val();
 	}
@@ -430,7 +419,7 @@
 		};
 
 		let formPago = $('#formularioPago');
-		$.post('/test/crearUsuario', formPago.serialize(), function (res) {
+		$.post('/crearUsuario', formPago.serialize(), function (res) {
 			pedidoID = res.id;
 			$("#pedidoId").val(pedidoID);
 		}).done(function () {
